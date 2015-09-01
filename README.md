@@ -1,5 +1,5 @@
 # Qolak Website UI
-###Qolak Website's UI, made with Material Design guidelines.
+###Qolak Website's UI, made with Google's Material Design guidelines.
 
 #####Files<br />
 index.html<br />
@@ -32,4 +32,4 @@ js/<br />
 ----init.js<br />
 ----jquery.min.js<br />
 ----materialize.js<br />
-materialize.min.js<br />
+----materialize.min.js<br />
