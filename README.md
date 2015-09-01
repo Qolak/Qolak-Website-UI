@@ -1,35 +1,35 @@
 # Qolak Website UI
 ##Qolak Website's UI, made with Material Design guidelines.
 
-###Files
-index.html
-css/
-----materialize.css
-----materialize.min.css
-----qolak.body.css
-----qolak.footer.css
-----qolak.header.css
-font/
-----koodak/
---------koodak.eot
---------koodak.otf
---------koodak.ttf
---------koodak.woff
---------koodak.woff2
-----material-design-icons/
---------LICENSE.txt
---------material-design-icons.eot
---------material-design-icons.svg
---------material-design-icons.ttf
---------material-design-icons.woff
---------material-design-icons.woff2
-----yekan/
---------yekan.eot
---------yekan.otf
---------yekan.ttf
---------yekan.woff
-js/
-----init.js
-----jquery.min.js
-----materialize.js
-materialize.min.js
+###Files<br />
+index.html<br />
+css/<br />
+----materialize.css<br />
+----materialize.min.css<br />
+----qolak.body.css<br />
+----qolak.footer.css<br />
+----qolak.header.css<br />
+font/<br />
+----koodak/<br />
+--------koodak.eot<br />
+--------koodak.otf<br />
+--------koodak.ttf<br />
+--------koodak.woff<br />
+--------koodak.woff2<br />
+----material-design-icons/<br />
+--------LICENSE.txt<br />
+--------material-design-icons.eot<br />
+--------material-design-icons.svg<br />
+--------material-design-icons.ttf<br />
+--------material-design-icons.woff<br />
+--------material-design-icons.woff2<br />
+----yekan/<br />
+--------yekan.eot<br />
+--------yekan.otf<br />
+--------yekan.ttf<br />
+--------yekan.woff<br />
+js/<br />
+----init.js<br />
+----jquery.min.js<br />
+----materialize.js<br />
+materialize.min.js<br />
