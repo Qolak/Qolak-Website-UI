@@ -1,7 +1,7 @@
 # Qolak Website UI
-##Qolak Website's UI, made with Material Design guidelines.
+###Qolak Website's UI, made with Material Design guidelines.
 
-###Files<br />
+#####Files<br />
 index.html<br />
 css/<br />
 ----materialize.css<br />
