@@ -79,9 +79,29 @@ nav ul#dropdown-container {
 	text-align: right !important;
 }
 
+div.navbar-fixed ul#user-dropdown li a{
+	font-size: 18px !important;
+}
+
 nav ul a i#arrow {
 	position: relative !important;
 	top: 12px !important;
+}
+
+nav ul#searchbar li{
+	height: 40px !important;
+	position: relative !important;
+	top: 10px !important;
+	line-height: 0px !important;
+}
+
+nav ul#searchbar i{
+	position: relative;
+	top: 10px !important;
+}
+
+nav ul#searchbar form div{
+	height: 40px !important;
 }
 
 .side-nav {
