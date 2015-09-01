@@ -24,6 +24,16 @@ footer button {
 	line-height: 0px;
 }
 
+footer div button {
+	width: 150px !important;
+	text-align: right !important;
+}
+
+footer div button i {
+	position: absolute !important;
+	left: 20px !important;
+}
+
 .news-latter button {
 	font-size: 22px;
 }
@@ -35,4 +45,8 @@ footer button {
 .input-field .prefix {
     left: -15px;
     top:8px;
+}
+
+footer div#newsletter-pane {
+	padding-bottom: 30px !important;
 }
