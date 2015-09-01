@@ -1,0 +1,30 @@
+html {
+	font-family: 'Serif', sans-serif;
+}
+
+body{
+	direction: rtl !important;
+}
+
+body div ul#user-dropdown li {
+	text-align: right !important;
+}
+
+.tabs .tab a {
+	color: #03a9f4 !important; /*Light-Blue*/
+	font-family: 'Yekan', sans-serif;
+	font-size: 1.2rem;
+	letter-spacing: -0.3px;
+}
+
+.tabs .tab a:hover {
+	color: #4fc3f7 !important; /*Light-Blue Lighten-2*/
+}
+
+.tabs .tab a.active {
+	border-color: #4fc3f7;
+}
+
+.tabs .indicator {
+    background-color: #4fc3f7 !important;
+}

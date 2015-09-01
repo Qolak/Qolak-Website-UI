@@ -1,0 +1,29 @@
+footer.page-footer {
+   padding-top: 10px;
+}
+
+footer .news-latter{
+ padding: 10px 40px !important;	
+ margin-top: -12px;
+}
+
+footer .row{
+	margin-bottom: 0px;
+}
+
+footer #email{
+	text-align: left;
+}
+
+.news-latter button{
+	font-size: 22px;
+}
+
+.footer-copyright .cp{
+	/*margin-left: -70px;	*/
+}
+
+.input-field .prefix {
+    left: -15px;
+    top:8px;
+}

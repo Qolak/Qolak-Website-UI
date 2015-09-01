@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <!--CSS Import-->
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/qolak.header.css">
+  <link rel="stylesheet" href="css/qolak.body.css">
+  <link rel="stylesheet" href="css/qolak.footer.css">
+  <!--JavaScript Import-->
+  <script src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <!--Scripts for initializing some objects for materializecss-->
+  <script src="js/init.js"></script>
+</head>
+
+<body>
+
+  <div class="navbar-fixed">
+
+  <!--User Dropdown Initialization-->
+
+    <ul id="user-dropdown" class="dropdown-content">
+      <li><a href="http://qolak.com/user/profile">حساب کاربری</a></li>
+      <li><a href="http://qolak.com/user/settings">تنظیمات</a></li>
+      <li><a href="http://qolak.com/user/qolak">قلک من</a></li>
+      <li class="divider"></li>
+      <li><a href="http://qolak.com/logout">خروج</a></li>
+    </ul>
+
+    <!--Top Navigation Bar-->
+
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="container">
+
+        <!--Logo Container-->
+        <ul id="logo-container" class="right">
+          <li>
+            <a href="http://qolak.com" class="brand-logo right">قلک</a>
+          </li>
+        </ul>
+
+        <!--User Dropdown Container-->
+        <ul id="dropdown-container" class="right">
+          <li>
+            <a href="" class="dropdown-button" data-activates="user-dropdown" data-beloworigin="true"><i id="arrow" class="material-icons small">arrow_drop_down</i>آقای حاجیانپور</a>
+          </li>
+        </ul>
+
+        <!--Sidebar Menu Button-->
+        <a id="menu-button" href="" data-activates="nav-mobile" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+
+        <!--Top Links Container-->
+        <ul id="top-button-container" class="hide-on-med-and-down left">
+          <li>
+            <a href="http://qolak.com/blog">مجله</a>
+          </li>
+          <li class="active">
+            <a href="http://qolak.com/create">ساخت قلک</a>
+          </li>
+        </ul>
+
+        <!--Sidebar Items-->
+        <ul id="nav-mobile" class="side-nav">
+          <li id="sidebar-title" class="light-blue darken-1">
+            <h4 style="border-bottom: 2px; padding-bottom:5px;">منو</h4>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#">ساخت قلک</a>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#">مجله</a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+  </div>
+
+<img class="activator" src="img/untitled.png"> 
+  <!--Tabs-->
+  <div class="container">
+
+    <div class="row">
+      <!--Tabs-->
+      <div class="col s12 light-blue-text">
+        <ul class="tabs">
+          <!--Go to qolak.body.css for tab's text colors-->
+          <li class="tab col s3"><a href="#EndingSoon">رو به پایان</a></li>
+          <li class="tab col s3"><a href="#New">تازه ترین ها</a></li>
+          <li class="tab col s3"><a class="active" href="#Featured">برجسته ترین ها</a></li>
+        </ul>
+      </div>
+
+      <!--Tab Contents-->
+      <div id="EndingSoon" class="col s12">These are gonna end soon.</div>
+      <div id="New" class="col s12">These are new.</div>
+      <div id="Featured" class="col s12">Featured Qolaks.</div>
+    </div>
+
+
+  <!--Info Cards-->
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card hoverable">
+          <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="img/office.jpg">
+            </div>
+          <div class="card-content right-align">
+            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons left">more_vert</i></span>
+              <p><a href="#">This is a link</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons left">close</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+        </div>
+      </div>
+        <div class="col s12 m6">
+        <div class="card hoverable">
+          <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="img/office.jpg">
+            </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons left">more_vert</i></span>
+              <p><a href="#">This is a link</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons left">close</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l8 s12 right">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l4 s12 news-latter teal hoverable">
+          <h5 class="white-text">در جریان باشید</h5>
+          <p class="grey-text text-lighten-4">ایمیل خود را در کادر زیر وارد کنید تا شما را در جریان قرار دهیم</p>
+      <div class="input-field col s12 white-text">
+        <input id="email" type="email" class="validate">
+        <label class="white-text" for="email">email</label>
+        <button class="btn waves-effect waves-light hovarable" type="submit" name="action">عضویت
+          <i class="Large material-icons">send</i>
+        </button>
+      </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        <div class="cp left">تمامی حقوق متعلق به قلک است
+        </div>
+      </div>
+    </div>
+  </footer>  
+
+</body>
+
+</html>

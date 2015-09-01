@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Koodak';
+    src:  url('../font/koodak/koodak.eot');
+    src:  url('../font/koodak/koodak.eot?#iefix') format('embedded-opentype'),    
+          url('../font/koodak/koodak.woff') format('woff'),
+          url('../font/koodak/koodak.ttf') format('truetype');
+
+    font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yekan';
+    src:  url('../font/yekan/yekan.eot');
+    src:  url('../font/yekan/yekan.eot?#iefix') format('embedded-opentype'),    
+          url('../font/yekan/yekan.woff') format('woff'),
+          url('../font/yekan/yekan.ttf') format('truetype');
+
+    font-weight: normal;
+	font-style: normal;
+}
+
+nav .brand-logo {
+	margin-right: 4rem !important;
+}
+
+nav ul a.brand-logo {
+	font-size: 3.2rem !important;
+	padding-top: 4px !important;
+}
+
+nav .brand-logo.center {
+    left: 25% !important;
+}
+@media only screen and (max-width : 992px) {
+    nav .brand-logo {
+    	left: 25% !important;
+    } 
+}
+
+nav ul a {
+	font-size: 1.3rem !important;
+}
+.icon-block {
+	padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+nav {
+	font-family: 'Yekan' !important;
+	letter-spacing: -0.5px !important;
+}
+
+nav ul.side-nav li#sidebar-title{
+	padding-top: 1.05rem !important;
+	padding-bottom: 1.2rem !important;
+}
+nav ul.side-nav li#sidebar-title h4 {
+	color: white !important;
+	text-align:center !important;
+	margin: 0px !important;
+}
+
+nav ul.side-nav li#sidebar-title:hover {
+	background-color: #039be5 !important; /*Light-Blue Darken-1*/
+}
+
+nav a#menu-button {
+	position: absolute;
+	left: 10px;
+	font-size: 1px !important;
+	direction: ltr !important;
+}
+
+nav ul#dropdown-container {
+	direction: ltr !important;
+	text-align: right !important;
+}
+
+nav ul a i#arrow {
+	position: relative !important;
+	top: 12px !important;
+}
+
+.side-nav {
+	background-color: #DADADA !important; /*Gray*/
+}
+
+.side-nav li:hover, .side-nav li.active {
+    background-color: #81d4fa !important; /*Light-Blue*/
+}
+
+.side-nav li#sidebar-title:hover, .side-nav li#sidebar-title.active {
+    background-color: #81d4fa !important; /*Light-Blue*/
+}
+
+nav ul#top-button-container {
+	position: relative;
+	right: 80px;
+}
