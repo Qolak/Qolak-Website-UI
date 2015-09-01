@@ -1,25 +1,34 @@
+footer {
+	font-family: 'Yekan', sans-serif;
+}
+
 footer.page-footer {
    padding-top: 10px;
 }
 
-footer .news-latter{
+footer .news-latter {
  padding: 10px 40px !important;	
  margin-top: -12px;
 }
 
-footer .row{
+footer .row {
 	margin-bottom: 0px;
 }
 
-footer #email{
+footer #email {
 	text-align: left;
 }
 
-.news-latter button{
+footer button {
+	padding-bottom: 5px;
+	line-height: 0px;
+}
+
+.news-latter button {
 	font-size: 22px;
 }
 
-.footer-copyright .cp{
+.footer-copyright .cp {
 	/*margin-left: -70px;	*/
 }
 
