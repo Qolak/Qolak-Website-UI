@@ -123,3 +123,22 @@ nav ul#top-button-container {
 	position: relative;
 	right: 80px;
 }
+
+nav ul li form#search {
+  background-color: #747474;
+  width: inherit !important;
+}
+
+nav ul li#search-li {
+  padding: 0px !important;
+}
+
+nav ul li form#search input {
+  width: 75% !important;
+}
+
+nav ul li form#search i {
+  position: relative;
+  top: 10px !important;
+  left: 20px !important;
+}
