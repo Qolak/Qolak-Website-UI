@@ -92,7 +92,9 @@ nav ul#searchbar li{
 	height: 40px !important;
 	position: relative !important;
 	top: 10px !important;
+  right: 190px !important;
 	line-height: 0px !important;
+  width: 180% !important;
 }
 
 nav ul#searchbar i{
@@ -102,6 +104,7 @@ nav ul#searchbar i{
 
 nav ul#searchbar form div{
 	height: 40px !important;
+  width: inherit;
 }
 
 .side-nav {
