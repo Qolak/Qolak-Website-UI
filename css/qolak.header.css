@@ -142,3 +142,12 @@ nav ul li form#search i {
   top: 10px !important;
   left: 20px !important;
 }
+
+.input-field input[type=search]:focus {
+  background-color: #747474 !important;
+  color: #fff !important; 
+}
+
+.input-field input[type=search]:focus + label i {
+  color: #fff !important; 
+}
