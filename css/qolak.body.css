@@ -6,6 +6,10 @@ a, a:active, a:focus {
 outline: none;
 }
 
+body {
+	direction: rtl !important;
+}
+
 body div ul#user-dropdown li {
 	text-align: right !important;
 }
