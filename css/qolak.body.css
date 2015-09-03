@@ -1,5 +1,5 @@
 html {
-	font-family: 'Serif', sans-serif;
+	font-family: 'Koodak', sans-serif;
 }
 
 body{
@@ -27,4 +27,47 @@ body div ul#user-dropdown li {
 
 .tabs .indicator {
     background-color: #4fc3f7 !important;
+}
+
+.pie_progress {
+	width: 100px;
+    margin-top: -20px;
+}
+
+.pie_progress__number {
+	position: relative;
+	float: left;
+	top: 60px;
+	left: 35px;
+}
+
+.pie_day {
+	width: 60px;
+    margin-top: 0px;
+}
+
+.pie_day__number {
+	position: relative;
+	float: left;
+    top: 40px;
+    left: 15px;
+}
+
+.item-row .row	{
+	margin-bottom: 0 !important;
+}
+
+.card-location i {
+	position: relative;
+    direction: ltr;
+    top: 2px;
+    margin-right: 5px
+}
+
+.item-img {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 180px;
+  width: 100%;
 }
