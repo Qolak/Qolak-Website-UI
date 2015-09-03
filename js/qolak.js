@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 function qolakToast(message, duration)
 {
-	if(typeof(qolakToast.toastID) === undefined)
+	if(qolakToast.toastID == undefined)
 	{
 		qolakToast.toastID = 1;
 	}
