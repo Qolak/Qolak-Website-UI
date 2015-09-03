@@ -2,8 +2,8 @@ html {
 	font-family: 'Serif', sans-serif;
 }
 
-body{
-	direction: rtl !important;
+a, a:active, a:focus {
+outline: none;
 }
 
 body div ul#user-dropdown li {
