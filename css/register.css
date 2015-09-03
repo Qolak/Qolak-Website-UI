@@ -41,3 +41,11 @@ div#toast-container a{
 	color: #0072FF !important;
 	margin: 0px !important;
 }
+
+.input-field .prefix.active {
+	color: #0089FE !important;
+}
+
+.input-field input[type=text]:focus, .input-field input[type=password]:focus, .input-field input[type=email]:focus{
+     border-bottom: 1px solid #0089FE;
+     box-shadow: 0 1px 0 0 #0089FE;
