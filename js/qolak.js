@@ -18,14 +18,19 @@ function checkForm()
 		}
 	});
 
-	if(counter==5)
+	if(counter==6)
 	{
-		$("form").submit();
+		$("#agreementModal").openModal();
 	}
 	else
 	{
 		Materialize.toast('<a class=btn-flat href=# onclick=removeElement(&#39;toast-container&#39;) >X</a><span>لطفا تمامی اطلاعات را به صورت کامل وارد کنید!</span>', 3000);
 	}
+}
+
+function submitForm()
+{
+	$("form").submit();
 }
 
 function removeElement(id) {
