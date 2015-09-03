@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Yekan';
+    src:  url('../font/yekan/yekan.eot');
+    src:  url('../font/yekan/yekan.eot?#iefix') format('embedded-opentype'),    
+          url('../font/yekan/yekan.woff') format('woff'),
+          url('../font/yekan/yekan.ttf') format('truetype');
+
+    font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	direction: rtl !important;
+}
+
+.container {
+	font-family: 'Yekan', sans-serif !important;
+	margin-top: 20px !important;
+}
+
+label {
+	position: absolute !important;
+	right: 20px !important;
+}
+
+form div.input-field i {
+	position: relative;
+	left: 40px !important;
+}
+
+form button {
+	width: 100% !important;
+	font-size: 20px !important;
+}
+
+div#toast-container {
+	font-family: 'Yekan', sans-serif !important;
+}
+
+div#toast-container a{
+	color: #0072FF !important;
+	margin: 0px !important;
+}
