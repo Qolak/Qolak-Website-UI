@@ -33,45 +33,58 @@ body div ul#user-dropdown li {
     background-color: #4fc3f7 !important;
 }
 
-.pie_progress {
+.card-item .pie_progress {
 	width: 100px;
     margin-top: -20px;
 }
 
-.pie_progress__number {
+.card-item .pie_progress__number {
 	position: relative;
 	float: left;
 	top: 60px;
 	left: 35px;
 }
 
-.pie_day {
+.card-item .pie_day {
 	width: 60px;
     margin-top: 0px;
 }
 
-.pie_day__number {
+.card-item .pie_day__number {
 	position: relative;
 	float: left;
     top: 40px;
     left: 15px;
 }
 
-.item-row .row	{
+.card-item .item-row .row	{
 	margin-bottom: 0 !important;
 }
 
-.card-location i {
+.card-item .card-location i {
 	position: relative;
     direction: ltr;
     top: 2px;
     margin-right: 5px
 }
 
-.item-img {
+.card-item .item-img {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  height: 180px;
+  height: 250px;
   width: 100%;
+}
+
+.card-item .card-reveal{
+	display: block;
+	transform: translateY(0%);
+	height: auto;
+	-webkit-transition: top .3s ease-in-out; /* Safari */
+    transition: top .3s ease-in-out;
+}
+
+.card-item:hover .card-reveal{
+    top: 30%;
+
 }
