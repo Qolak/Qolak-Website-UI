@@ -8,6 +8,16 @@ $(document).ready(function() {
 
 });
 
+var toastID = 0;
+
+function qolakToast(message, duration)
+{
+	toastID++;
+
+	var messageText = '<a id=toast' + toastID + ' class=btn-flat href=# onclick=removeToast(&#39;toast' + toastID + '&#39;) >X</a><span class=truncate>'+ message +'</span>';
+	Materialize.toast(messageText, duration);
+}
+
 function checkForm()
 {
 	//Check if the user has filled the form completely
@@ -21,19 +31,19 @@ function checkForm()
 
 	if(counter!=6)
 	{
-		Materialize.toast('<a class=btn-flat href=# onclick=removeElement(&#39;toast-container&#39;) >X</a><span>لطفا تمامی اطلاعات را به صورت کامل وارد کنید!</span>', 3000);
+		qolakToast('لطفا تمامی اطلاعات را به صورت کامل وارد کنید!', 300000);
 	}
 
 	//Check if both passwords are the same
 	else if($('#password').val() != $('#re-password').val())
 	{
-		Materialize.toast('<a class=btn-flat href=# onclick=removeElement(&#39;toast-container&#39;) >X</a><span>رمزهای عبور شبیه به هم نیستند! لطفا دوباره وارد کنید.</span>', 3000);
+		qolakToast('رمزهای عبور شبیه به هم نیستند! لطفا دوباره وارد کنید.', 300000);
 	}
 
 	//Check if email has the correct syntax
 	else if(!isEmail($('#email').val()))
 	{
-		Materialize.toast('<a class=btn-flat href=# onclick=removeElement(&#39;toast-container&#39;) >X</a><span>ایمیل وارد شده صحیح نیست! لطفا دوباره وارد کنید.</span>', 3000);
+		qolakToast('ایمیل وارد شده صحیح نیست! لطفا دوباره وارد کنید.', 300000);
 	}
 
 	else
@@ -49,6 +59,10 @@ function submitForm()
 
 function removeElement(id) {
     return (elem=document.getElementById(id)).parentNode.removeChild(elem);
+}
+
+function removeToast(id) {
+    return (elem=document.getElementById(id)).parentNode.parentNode.removeChild(elem.parentNode);
 }
 
 function isEmail(email) {
