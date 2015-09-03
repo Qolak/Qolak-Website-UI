@@ -8,13 +8,20 @@ $(document).ready(function() {
 
 });
 
-var toastID = 0;
+
 
 function qolakToast(message, duration)
 {
-	toastID++;
+	if(qolakToast.toastID == undefined)
+	{
+		qolakToast.toastID = 1;
+	}
+	else
+	{
+		qolakToast.toastID++;
+	}
 
-	var messageText = '<a id=toast' + toastID + ' class=btn-flat href=# onclick=removeToast(&#39;toast' + toastID + '&#39;) >X</a><span class=truncate>'+ message +'</span>';
+	var messageText = '<a id=toast' + qolakToast.toastID + ' class=btn-flat href=# onclick=removeToast(&#39;toast' + qolakToast.toastID + '&#39;) >X</a><span class=truncate>'+ message +'</span>';
 	Materialize.toast(messageText, duration);
 }
 
@@ -31,19 +38,19 @@ function checkForm()
 
 	if(counter!=6)
 	{
-		qolakToast('لطفا تمامی اطلاعات را به صورت کامل وارد کنید!', 300000);
+		qolakToast('لطفا تمامی اطلاعات را به صورت کامل وارد کنید!', 3000);
 	}
 
 	//Check if both passwords are the same
 	else if($('#password').val() != $('#re-password').val())
 	{
-		qolakToast('رمزهای عبور شبیه به هم نیستند! لطفا دوباره وارد کنید.', 300000);
+		qolakToast('رمزهای عبور شبیه به هم نیستند! لطفا دوباره وارد کنید.', 3000);
 	}
 
 	//Check if email has the correct syntax
 	else if(!isEmail($('#email').val()))
 	{
-		qolakToast('ایمیل وارد شده صحیح نیست! لطفا دوباره وارد کنید.', 300000);
+		qolakToast('ایمیل وارد شده صحیح نیست! لطفا دوباره وارد کنید.', 3000);
 	}
 
 	else
