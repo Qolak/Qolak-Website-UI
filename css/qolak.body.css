@@ -2,7 +2,11 @@ html {
 	font-family: 'Koodak', sans-serif;
 }
 
-body{
+a, a:active, a:focus {
+outline: none;
+}
+
+body {
 	direction: rtl !important;
 }
 

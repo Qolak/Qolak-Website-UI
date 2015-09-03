@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <!--CSS Import-->
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/register.css">
+  <!--JavaScript Import-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/qolak.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="row">
+    <form id="register-form" class="col s12">
+      <div class="row">
+        <div class="input-field col s12 m6 l6 right">
+          <i class="material-icons prefix">perm_identity</i>
+          <input id="first_name" type="text" class="validate" required>
+          <label for="first_name">نام</label>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">person_pin</i>
+          <input id="last_name" type="text" class="validate" required>
+          <label for="last_name">نام خانوادگی</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">supervisor_account</i>
+          <input id="username" type="text" class="validate" length="32" required>
+          <label for="username">نام کاربری</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m6 l6 right">
+          <i class="material-icons prefix">lock_outline</i>
+          <input id="password" type="password" class="validate" length="32" required>
+          <label for="password">رمز عبور</label>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">lock</i>
+          <input id="re-password" type="password" class="validate" length="32" required>
+          <label for="re-password">تکرار رمز عبور</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">email</i>
+          <input id="email" type="email" class="validate" required>
+          <label for="email" data-error="آدرس ایمیل وارد شده صحیح نیست :(" data-success="آدرس ایمیل وارد شده صحیح است :)">ایمیل</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s11 m6 l3 right">
+          <button id="sendButton" class="btn btn-large waves-effect waves-light light-blue" type="button" name="action" onclick="checkForm()">نام نویسی
+            <i class="material-icons left">send</i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!--End-User License Agreement-->
+      <!-- Modal Structure -->
+    <div id="agreementModal" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>قوانین قلک</h4>
+        <p>متن قوانین</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="submitForm()">میپذیرم</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">نمیپذیرم</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
