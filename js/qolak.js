@@ -10,6 +10,7 @@ $(document).ready(function() {
 
 function checkForm()
 {
+	//Check if the user has filled the form completely
 	var counter = 0;
 	$(".input-field input").each(function(index, el) {
 		if( $(this).val() != "" )
@@ -18,13 +19,20 @@ function checkForm()
 		}
 	});
 
-	if(counter==6)
-	{
-		$("#agreementModal").openModal();
-	}
-	else
+	if(counter!=6)
 	{
 		Materialize.toast('<a class=btn-flat href=# onclick=removeElement(&#39;toast-container&#39;) >X</a><span>لطفا تمامی اطلاعات را به صورت کامل وارد کنید!</span>', 3000);
+	}
+
+	//Check if both passwords are the same
+	else if($('#password').val() != $('#re-password').val())
+	{
+		Materialize.toast('<a class=btn-flat href=# onclick=removeElement(&#39;toast-container&#39;) >X</a><span>رمزهای عبور شبیه به هم نیستند! لطفا دوباره وارد کنید.</span>', 3000);
+	}
+
+	else
+	{
+		$("#agreementModal").openModal();
 	}
 }
 
