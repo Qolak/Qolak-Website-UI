@@ -21,19 +21,19 @@ function checkForm()
 
 	if(counter!=6)
 	{
-		Materialize.toast('<a class=btn-flat href=# onclick=removeElement(&#39;toast-container&#39;) >X</a><span>لطفا تمامی اطلاعات را به صورت کامل وارد کنید!</span>', 3000);
+		Materialize.toast('<a class=btn-flat href=# onclick=removeElement(&#39;toast-container&#39;) >X</a><span class=truncate>لطفا تمامی اطلاعات را به صورت کامل وارد کنید!</span>', 3000);
 	}
 
 	//Check if both passwords are the same
 	else if($('#password').val() != $('#re-password').val())
 	{
-		Materialize.toast('<a class=btn-flat href=# onclick=removeElement(&#39;toast-container&#39;) >X</a><span>رمزهای عبور شبیه به هم نیستند! لطفا دوباره وارد کنید.</span>', 3000);
+		Materialize.toast('<a class=btn-flat href=# onclick=removeElement(&#39;toast-container&#39;) >X</a><span class=truncate>رمزهای عبور شبیه به هم نیستند! لطفا دوباره وارد کنید.</span>', 3000);
 	}
 
 	//Check if email has the correct syntax
 	else if(!isEmail($('#email').val()))
 	{
-		Materialize.toast('<a class=btn-flat href=# onclick=removeElement(&#39;toast-container&#39;) >X</a><span>ایمیل وارد شده صحیح نیست! لطفا دوباره وارد کنید.</span>', 3000);
+		Materialize.toast('<a class=btn-flat href=# onclick=removeElement(&#39;toast-container&#39;) >X</a><span class=truncate>ایمیل وارد شده صحیح نیست! لطفا دوباره وارد کنید.</span>', 3000);
 	}
 
 	else

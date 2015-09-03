@@ -40,6 +40,8 @@ div#toast-container {
 div#toast-container a{
 	color: #0072FF !important;
 	margin: 0px !important;
+	padding-left: 15px !important;
+	padding-right: 0px !important;
 }
 
 .input-field .prefix.active {
