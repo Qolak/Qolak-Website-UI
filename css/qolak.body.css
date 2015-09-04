@@ -33,6 +33,18 @@ body div ul#user-dropdown li {
     background-color: #4fc3f7 !important;
 }
 
+.card-item {
+	width:300px !important;
+	height: 500px  !important;
+}
+
+.card-item .item-detail {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	margin-bottom: 0px !important;
+}
+
 .card-item .pie_progress {
 	width: 100px;
     margin-top: -20px;
