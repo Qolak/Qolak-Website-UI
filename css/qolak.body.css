@@ -87,16 +87,3 @@ body div ul#user-dropdown li {
   height: 250px;
   width: 100%;
 }
-
-.card-item .card-reveal{
-	display: block;
-	transform: translateY(0%);
-	height: auto;
-	-webkit-transition: top .3s ease-in-out; /* Safari */
-    transition: top .3s ease-in-out;
-}
-
-.card-item:hover .card-reveal{
-    top: 30%;
-
-}
