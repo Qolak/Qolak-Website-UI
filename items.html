@@ -22,6 +22,9 @@
   <script type="text/javascript" src="js/jquery-asPieProgress.js"></script>
   <script type="text/javascript">
     jQuery(document).ready(function($){
+      for (var i = 0; i < 3; i++)
+        $(".card-obj").clone().appendTo(".items-row");
+      
       $('.pie_progress').asPieProgress({
         namespace: 'pie_progress'
       });
@@ -31,14 +34,16 @@
         namespace: 'pie_day'
       });
       $('.pie_day').asPieProgress('go',30);
+
+
     });
   </script>
 </head>
 
 <body>
-  <div class="row">
+  <div class="row items-row">
     <!--Card Item-->
-    <div class="col l3 m6 s12 right">
+    <div class="card-obj col l3 m6 s12 right">
       <div class="card hoverable card-item">
         <!--Item Image Container-->
         <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
