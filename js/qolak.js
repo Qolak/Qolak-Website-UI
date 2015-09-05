@@ -6,6 +6,22 @@ $(document).ready(function() {
 		$("input#search-field").val(this.value);
 	});
 
+	for (var i = 0; i < 3; i++)
+    	$(".card-obj").clone().appendTo(".items-row");
+    
+
+    $('.pie_progress').asPieProgress({
+        namespace: 'pie_progress'
+    });
+    $('.pie_progress').asPieProgress('go','60%');
+
+    $('.pie_day').asPieProgress({
+        namespace: 'pie_day'
+    });
+    $('.pie_day').asPieProgress('go',30);
+
+
+
 });
 
 
