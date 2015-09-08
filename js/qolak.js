@@ -30,7 +30,7 @@ function startIntro()
 	//Set introDiv object's position to the middle of the screen
 	$('#introDiv').css({
 		'position' : 'absolute',
-		'left' : (window.innerWidth/2 - 100).toString() + 'px',
+		'left' : (window.innerWidth/2 - 150).toString() + 'px',
 		'top' : (window.innerHeight/2 - 150).toString() + 'px'
 
 	});
