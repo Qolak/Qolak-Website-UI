@@ -79,7 +79,7 @@ body div ul#user-dropdown li {
 	position: relative;
     direction: ltr;
     top: 2px;
-    margin-right: 5px
+    margin-right: 5px;
 }
 
 .card-item .item-img {
@@ -97,4 +97,9 @@ body div ul#user-dropdown li {
 
 .card-item .item-row  .s8 {
 	padding-right: 20px;
+}
+
+.introjs-tooltip {
+	left: 0px !important;
+	right: 40% !important;
 }

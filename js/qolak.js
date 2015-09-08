@@ -23,10 +23,12 @@ var options = [
   	{selector: '.pie_progress', offset: 150, callback: '$(".pie_day").asPieProgress("go","50%");' }
   ];
   Materialize.scrollFire(options);
-
-
 });
 
+function startIntro()
+{
+	introJs().start();
+}
 
 
 function qolakToast(message, duration)

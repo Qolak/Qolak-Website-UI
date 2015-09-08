@@ -16,6 +16,7 @@
   <!--IntroJS CSS Import-->
   <link rel="stylesheet" href="css/introjs.min.css">
   <link rel="stylesheet" href="css/introjs-rtl.min.css">
+  <link rel="stylesheet" href="img/intro-themes/introjs-nassim.css">
 
   <!--JavaScript Import-->
   <script src="js/jquery.min.js"></script>
@@ -28,7 +29,7 @@
 </head>
 
 <body>
-
+  <div id="introDiv"></div>
   <div class="navbar-fixed">
 
   <!--User Dropdown Initialization-->
@@ -43,7 +44,7 @@
 
     <!--Top Navigation Bar-->
 
-    <nav class="light-blue lighten-1" role="navigation">
+    <nav class="light-blue lighten-1" role="navigation" data-intro="به قلک خوش آمدید!">
       <div class="container">
 
         <!--Logo Container-->
@@ -83,6 +84,9 @@
           </li>
           <li class="active">
             <a href="http://qolak.com/create">ساخت قلک</a>
+          </li>
+          <li>
+            <a id="introButton" href="#" onclick="startIntro()">راهنمایی</a>
           </li>
         </ul>
 
