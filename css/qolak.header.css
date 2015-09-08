@@ -151,3 +151,11 @@ nav ul li form#search i {
 .input-field input[type=search]:focus + label i {
   color: #fff !important; 
 }
+
+#introDiv {
+	position: absolute;
+	top: 35% !important;
+	right: 45% !important;
+	width: 1px !important;
+	height: 1px !important;
+}

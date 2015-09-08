@@ -27,9 +27,17 @@ var options = [
 
 function startIntro()
 {
-	introJs().start();
+	introJs().setOptions({
+	'skipLabel' : 'خروج',
+	'nextLabel' : 'بعدی',
+	'prevLabel' : 'قبلی',
+	'doneLabel' : 'پایان',
+	'showBullets' : false,
+	'exitOnEsc' : true,
+	'keyboardNavigation' : true,
+	'disableInteraction' : true
+	}).start();
 }
-
 
 function qolakToast(message, duration)
 {

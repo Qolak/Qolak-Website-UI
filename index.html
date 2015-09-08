@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -21,16 +21,16 @@
   <!--JavaScript Import-->
   <script src="js/jquery.min.js"></script>
   <script src="js/materialize.min.js"></script>
+    <!--IntroJS JavaScript Import-->
+  <script src="js/intro.min.js"></script>
   <!--Scripts for initializing some objects for materializecss-->
   <script src="js/qolak.js"></script>
-  <!--IntroJS JavaScript Import-->
-  <script src="js/intro.min.js"></script>
   <script type="text/javascript" src="js/jquery-asPieProgress.js"></script>
 </head>
 
 <body>
-  <div id="introDiv"></div>
-  <div class="navbar-fixed">
+  <div id="introDiv" data-intro="به قلک خوش آمدید!" data-step="1" data-position="left"></div>
+  <div class="navbar-fixed" data-intro="برای شروع، میتوانید یک قلک بسازید تا مردم از شما حمایت مالی کنند! همچنین میتوانید در سایت جستجو کنید یا به مجله های ما که حاوی آخرین اخبار مربوط به قلک است، سری بزنید!" data-step="2" data-position="bottom">
 
   <!--User Dropdown Initialization-->
 
@@ -44,7 +44,7 @@
 
     <!--Top Navigation Bar-->
 
-    <nav class="light-blue lighten-1" role="navigation" data-intro="به قلک خوش آمدید!">
+    <nav class="light-blue lighten-1" role="navigation">
       <div class="container">
 
         <!--Logo Container-->
@@ -83,9 +83,9 @@
             <a href="http://qolak.com/blog">مجله</a>
           </li>
           <li>
-            <a id="introButton" href="#" onclick="startIntro()">راهنمایی</a>
+            <a id="introButton" href="#" onclick="startIntro();">راهنمایی</a>
           </li>
-          <li class="active">
+          <li>
             <a href="http://qolak.com/create">ساخت قلک</a>
           </li>
         </ul>
@@ -104,7 +104,6 @@
               </div>
             </form>
           </li>
-
           <li class="center hide-on-large-only">
             <a href="#">ساخت قلک</a>
           </li>
@@ -121,7 +120,7 @@
   <!--Tabs-->
   <div class="container">
 
-    <div class="row">
+    <div class="row" data-intro="اگر میخواهید حامی افراد دیگر باشید، از قلک های زیر یکی را انتخاب کنید!" data-step="3" data-position="right">
       <!--Tabs-->
       <div class="col s12 light-blue-text">
         <ul class="tabs">
@@ -202,7 +201,7 @@
   <!--Info Cards-->
     <div class="row">
       <div class="col s12 m6">
-        <div class="card hoverable">
+        <div class="card hoverable" data-intro="برای اطلاعات بیشتر درباره نحوه کار قلک، اینجا را بخوانید." data-step="4" data-position="right">
           <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" src="img/office.jpg">
             </div>
@@ -216,7 +215,7 @@
             </div>
         </div>
       </div>
-        <div class="col s12 m6">
+      <div class="col s12 m6">
         <div class="card hoverable">
           <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" src="img/office.jpg">
@@ -245,7 +244,7 @@
             <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
           </ul>
         </div>
-        <div id="newsletter-pane" class="col l4 s12 news-latter light-blue darken-2 hoverable">
+        <div id="newsletter-pane" class="col l4 s12 news-latter light-blue darken-2 hoverable" data-intro="در خبرنامه ما عضو شوید تا آخرین اخبار راجع به قلک را برای شما ایمیل کنیم!" data-step="5" data-position="top">
           <h5 class="white-text">در جریان باشید</h5>
           <p class="grey-text text-lighten-4">ایمیل خود را در کادر زیر وارد کنید تا شما را در جریان اخبار روز قرار دهیم</p>
           <div class="input-field col s12 white-text">
