@@ -34,7 +34,8 @@ body div ul#user-dropdown li {
 }
 
 .card-item {
-	width:300px !important;
+    max-width: 300px;
+    min-width: 230px;
 	height: 500px  !important;
 }
 
