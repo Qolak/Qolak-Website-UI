@@ -98,3 +98,8 @@ body div ul#user-dropdown li {
 .card-item .item-row  .s8 {
 	padding-right: 20px;
 }
+
+/* IntroJS Override */
+.introjs-button {
+	color: #000 !important;
+}

@@ -47,7 +47,10 @@ function startIntro()
 	'disableInteraction' : true
 	}).oncomplete(function(){
 		scrollTo(0,0);
+	}).onafterchange(function(){
+		$('.introjs-button').removeClass('introjs-button').addClass('btn').addClass('waves-effect').addClass('waves-light');
 	}).start();
+
 }
 
 function qolakToast(message, duration)
