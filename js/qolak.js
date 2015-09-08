@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$(".button-collapse").sideNav();
+	$(".button-collapse").sideNav({menuWidth: 300});
 	$(".dropdown-button").dropdown();
 	$("input.search-field").on('change', function() {
 		$("input.search-field").val(this.value);
@@ -36,6 +36,8 @@ function startIntro()
 	'exitOnEsc' : true,
 	'keyboardNavigation' : true,
 	'disableInteraction' : true
+	}).oncomplete(function(){
+		scrollTo(0,0);
 	}).start();
 }
 
