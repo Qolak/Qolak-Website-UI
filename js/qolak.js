@@ -27,6 +27,7 @@ var options = [
 
 function startIntro()
 {
+	$('.button-collapse').sideNav('hide');
 	introJs().setOptions({
 	'skipLabel' : 'خروج',
 	'nextLabel' : 'بعدی',
