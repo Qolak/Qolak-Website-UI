@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$(".button-collapse").sideNav();
+	$(".button-collapse").sideNav({menuWidth: 300});
 	$(".dropdown-button").dropdown();
 	$("input.search-field").on('change', function() {
 		$("input.search-field").val(this.value);
@@ -26,11 +26,35 @@ var options = [
     {selector: '.pie_progress', offset: 150, callback: '$(".pie_progress").asPieProgress("go");'}
   ];
   Materialize.scrollFire(options);
-
-
 });
 
+function startIntro()
+{
+	//Set introDiv object's position to the middle of the screen
+	$('#introDiv').css({
+		'position' : 'absolute',
+		'left' : (window.innerWidth/2 - 150).toString() + 'px',
+		'top' : (window.innerHeight/2 - 150).toString() + 'px'
 
+	});
+
+	$('.button-collapse').sideNav('hide');
+	introJs().setOptions({
+	'skipLabel' : 'خروج',
+	'nextLabel' : 'بعدی',
+	'prevLabel' : 'قبلی',
+	'doneLabel' : 'پایان',
+	'showBullets' : false,
+	'exitOnEsc' : true,
+	'keyboardNavigation' : true,
+	'disableInteraction' : true
+	}).oncomplete(function(){
+		scrollTo(0,0);
+	}).onafterchange(function(){
+		$('.introjs-button').removeClass('introjs-button').addClass('btn').addClass('waves-effect').addClass('waves-light');
+	}).start();
+
+}
 
 function qolakToast(message, duration)
 {
