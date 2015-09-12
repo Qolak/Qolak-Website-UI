@@ -15,12 +15,15 @@ $(document).ready(function() {
     });
 
     $('.pie_day').asPieProgress({
-        namespace: 'pie_day'
+        namespace: 'pie_day',
+        label: function(n) {
+        var percentage = this.getPercentage(n);
+        return percentage;
+    }
     });
-
+ 
 var options = [
-    {selector: '.pie_progress', offset: 150, callback: '$(".pie_progress").asPieProgress("go","60%");' },
-  	{selector: '.pie_progress', offset: 150, callback: '$(".pie_day").asPieProgress("go","50%");' }
+    {selector: '.pie_progress', offset: 150, callback: '$(".pie_progress").asPieProgress("go");'}
   ];
   Materialize.scrollFire(options);
 
