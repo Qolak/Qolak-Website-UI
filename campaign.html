@@ -17,12 +17,16 @@
   <link rel="stylesheet" href="css/introjs.min.css">
   <link rel="stylesheet" href="css/introjs-rtl.min.css">
   <link rel="stylesheet" href="img/intro-themes/introjs-nassim.css">
+  <!--Campaign CSS Import-->
+  <link rel="stylesheet" href="css/campaign.css">
 
   <!--JavaScript Import-->
   <script src="js/jquery.min.js"></script>
   <script src="js/materialize.min.js"></script>
-    <!--IntroJS JavaScript Import-->
+  <!--IntroJS JavaScript Import-->
   <script src="js/intro.min.js"></script>
+  <!--Campaign JavaScript Import-->
+  <script src="js/campaign.js"></script>
   <!--Scripts for initializing some objects for materializecss-->
   <script src="js/qolak.js"></script>
   <script type="text/javascript" src="js/jquery-asPieProgress.js"></script>
@@ -119,7 +123,7 @@
     </nav>
   </div>
 <!--***************************************************************************-->
-	<div class="indigo lighten-5">
+<div class="indigo lighten-5">
 	<div class="container">
 		<div class="row section">
 			<div class="col s12 center-align">
@@ -148,15 +152,28 @@
 		</div>
 		<div class="row">
 			<div class="col l8 s12 right">
-				<h5>توضیحات مختصر درباره این کمپین</h5>	
+				<h5 class="col s12">توضیحات مختصر درباره این کمپین</h5>	
+				<div class="chip green">
+    				ایران
+    				<i class="material-icons">room</i>
+  				</div>
+				<div class="chip blue">
+    				قلک
+    				<i class="material-icons">label</i>
+  				</div>
+				<div class="chip blue">
+    				خیریه
+    				<i class="material-icons">label</i>
+  				</div>
+  				<a class="waves-effect waves-teal btn-flat">به اشتراک گذاری این قلک</a>
 			</div>
 			<div class="row col s4">
 				<div class="col s4 right">
-    				<img class="responsive-img" src="img/profile.jpg" style="border-radius: 50%;">
+    				<img class="responsive-img profile-img" src="img/profile.jpg">
 				</div>	
 				<div class="col s8">
 					<h5>مهرداد محمدی</h5>
-					<h6>Qolak.com</h6>
+					<h6 class="grey-text">Qolak.com</h6>
 				</div>
 				<div class="">
 					<a href="#">مشاهده کامل پروفایل</a>
@@ -164,7 +181,88 @@
 			</div>
 		</div>			
 	</div>
+	<div class="divider"></div>
+</div>
+<div class="row">
+	<div class="col l5 s12 right">
+		<div class="row">
+    		<div class="col s12">
+      			<ul class="tabs right-align">
+        			<li class="tab col s3"><a href="#comments">نظرات</a></li>
+        			<li class="tab col s3"><a class="active" href="#qolak">قلک</a></li>
+        			<li class="tab col s3 hide-on-large-only"><a href="#awards">پاداش ها</a></li>
+      			</ul>
+    		</div>
+    	</div>
+    </div>
+    <div class="col l3 offset-s4 back-button hide-on-med-and-down" style="height:100%">
+    	<a class="waves-effect waves-light btn-large"><i class="material-icons left">loyalty</i>به اشتراک گذاری این کمپین</a>
 	</div>
+</div>
+<div class="row container">
+    <div class="col l8 s12 right">
+		<div class="row">	
+    		<div id="comments" class="col s12">Test 1</div>
+    		<div id="qolak" class="col s12">
+    			<h4 class="flow-text">درباره این قلک</h4>
+    		</div>
+    		<div id="awards" class="col s12">Test 3</div>
+  		</div>
+	</div>
+	<div class="col l4 hide-on-med-and-dow side-awards">
+		<div class="award-item indigo lighten-5 hoverable">
+			<div class="content">
+				<div class="row teal-text">
+					<i class="material-icons right">redeem</i>
+					<div class="right award-item-title">پیش پرداخت 1000 ریال یا بیشتر</div>
+				</div>
+				<div class="row">
+					<div class="container">
+					<h5 class="blue-text">600 پشتیبان</h5>
+					<h6>پاداش هایی که برای این پیش پرداخت درنظر گرفته شده اند.</h6>
+					</div>
+				</div>
+			</div>
+			<div class="mask valign-wrapper teal lighten-1">
+				<h4 class="white-text valign center-align">این پاداش را انتخاب کنید</h4>
+			</div>
+		</div>
+		<div class="award-item indigo lighten-5 hoverable">
+			<div class="content">
+				<div class="row teal-text">
+					<i class="material-icons right">redeem</i>
+					<div class="right award-item-title">پیش پرداخت 10000 ریال یا بیشتر</div>
+				</div>
+				<div class="row">
+					<div class="container">
+					<h5 class="blue-text">60 پشتیبان</h5>
+					<h6>پاداش هایی که برای این پیش پرداخت درنظر گرفته شده اند.</h6>
+					</div>
+				</div>
+			</div>
+			<div class="mask valign-wrapper teal lighten-1">
+				<h4 class="white-text valign center-align">این پاداش را انتخاب کنید</h4>
+			</div>
+		</div>
+		<div class="award-item indigo lighten-5 hoverable">
+			<div class="content">
+				<div class="row teal-text">
+					<i class="material-icons right">redeem</i>
+					<div class="right award-item-title">پیش پرداخت 100000 ریال یا بیشتر</div>
+				</div>
+				<div class="row">
+					<div class="container">
+					<h5 class="blue-text">6 پشتیبان</h5>
+					<h6>پاداش هایی که برای این پیش پرداخت درنظر گرفته شده اند.</h6>
+					</div>
+				</div>
+			</div>
+			<div class="mask valign-wrapper teal lighten-1">
+				<h4 class="white-text valign center-align">این پاداش را انتخاب کنید</h4>
+			</div>
+		</div>
+	</div>
+</div>
 <!--***************************************************************************-->
   <footer class="page-footer light-blue lighten-1">
     <div class="container">

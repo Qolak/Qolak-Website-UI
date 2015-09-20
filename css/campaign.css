@@ -1,0 +1,78 @@
+@media only screen and (min-width: 993px){
+	.container {
+    	width: 85% !important;
+	}
+}
+
+.profile-img {
+	border-radius: 50%;
+}
+
+i , .tabs {
+	direction: ltr;
+}
+
+.under-tab-divider {
+    width: 100%;
+    position: relative;
+    top: -20px;
+}
+
+.back-button {
+	margin-top: 15px;
+}
+
+.award-item {
+	border-radius: 5px;
+	width: 95%;
+	padding: 20px 10px;
+	margin: 20px 10px !important;
+	cursor:pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+.award-item .row {
+    margin:5px 10px;
+}
+
+.award-item .award-item-title {
+	font-size: 1.4rem;
+    line-height: 110%;
+    letter-spacing: -0.5px;
+}
+
+.award-item .mask {
+	background-color: #26a69a !important;
+	position: absolute;
+	margin-right: -10px;
+	width: 100%;
+	height: 100%;
+	top:0px;
+	left: -110%;
+	webkit-transition: left 0.2s ease-in-out;
+    -moz-transition: left 0.2s ease-in-out;
+    -o-transition: left 0.2s ease-in-out;
+    transition: left 0.2s ease-in-out;
+}
+
+.award-item .content {
+    float:none!important;
+    display: inline-block;
+	webkit-transition: margin 0.2s ease-in-out;
+    -moz-transition: margin 0.2s ease-in-out;
+    -o-transition: margin 0.2s ease-in-out;
+    transition: margin 0.2s ease-in-out;
+}
+
+.award-item .mask h4 {
+	width: 100%;
+}
+
+.award-item:hover .mask{
+	left:0px;
+}
+
+.award-item:hover .content{
+	margin-right:-100%; 
+}
