@@ -12,9 +12,10 @@ function resize_bugfix() {
 	// Cache reference to our container
     var $container = $("#container");
     var $lastStatus=0;
-    // A function for updating max-height
-    function updateMaxHeight () {
-    	if($("#award").css("display")!="block") {	
+
+    $(window).resize(function()
+	{   
+	    if($("#award").css("display")!="block") {	
     		if($lastStatus==1) {
     			$("#qolak").click();
     			$lastStatus=0;
@@ -22,7 +23,5 @@ function resize_bugfix() {
     	}else{
     		$lastStatus=1;
     	}
-    }
-    // Call updateMaxHeight when browser resize event fires
-    $(window).on("resize", updateMaxHeight);
+	});
 }
