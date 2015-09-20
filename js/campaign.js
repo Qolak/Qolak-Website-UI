@@ -6,6 +6,12 @@ $(document).ready(function(){
  
     resize_bugfix();
 
+    $(".share-social").click(function(){
+        $('#Socail-modal').openModal();
+    });
+
+    
+
  });
 
 function resize_bugfix() {
