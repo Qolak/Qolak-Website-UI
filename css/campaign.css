@@ -12,9 +12,13 @@ i , .tabs {
 	direction: ltr;
 }
 
+.camp-creator {
+	margin: 20px 0;
+}
+
 .camp-creator-detail i {
-    top: -5px;
-    right: 8px;
+ top: 5px;
+right: 0px;
     position: relative;
 }
 
