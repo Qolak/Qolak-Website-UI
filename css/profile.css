@@ -29,14 +29,42 @@
 
 html {
     direction: rtl;
+    font-family: serif;
 }
 
 i {
-    direction: initial !important;
+    direction: ltr !important;
 }
 
 .edit-button {
     position: relative;
     top: -325px;
     right: 10%;
+}
+
+.content-row {
+    display: inline-block;
+    margin-top: -160px;
+}
+
+.sidepanel {
+    overflow: visible;
+    height: inherit;
+    font-size: 1.3rem;
+}
+
+.table-of-contents a:hover {
+    color:#a8a8a8;
+    padding-left:19px;
+    border-left:2px solid #4ab6eb
+}
+
+.card .row label {
+    position: absolute;
+    right: 20px;
+}
+
+.card .row {
+    padding-left: 35px;
+    padding-right: 35px;
 }
