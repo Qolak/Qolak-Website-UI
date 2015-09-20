@@ -25,6 +25,20 @@
     border-color: white;
     border-width: 8px;
     border-style: solid;
+
+    transition: 0.40s filter ease-out;
+    -webkit-transition: 0.40s -webkit-filter ease-out;
+    -moz-transition: 0.40s -moz-filter ease-out;
+    -ms-transition: 0.40s -ms-filter ease-out;
+    -o-transition: 0.40s -o-filter ease-out;
+}
+
+.avatar-container img:hover {
+    filter: blur(0.5px) brightness(90%);
+    -webkit-filter: blur(0.5px) brightness(90%);
+    -moz-filter: blur(0.5px) brightness(90%);
+    -ms-filter: blur(0.5px) brightness(90%);
+    -o-filter: blur(0.5px) brightness(90%);
 }
 
 html {
@@ -53,6 +67,22 @@ i {
     font-size: 1.3rem;
 }
 
+.page-content {
+    padding-left: 100px !important;
+}
+
+@media (max-width: 600px) {
+.page-content {
+    padding-left: 0.75rem !important;
+}
+}
+
+@media (min-width: 600px) and (max-width: 992px){
+.page-content {
+    padding-left: 30px !important;
+}
+}
+
 .table-of-contents a:hover {
     color:#a8a8a8;
     padding-left:19px;
@@ -61,10 +91,25 @@ i {
 
 .card .row label {
     position: absolute;
-    right: 20px;
+    right: 10px;
 }
 
 .card .row {
     padding-left: 35px;
     padding-right: 35px;
 }
+
+
+.materialboxed {
+  display: inline !important;
+  cursor: zoom-in;
+  position: relative;
+  -webkit-transition: opacity .4s;
+  -moz-transition: opacity .4s;
+  -o-transition: opacity .4s;
+  -ms-transition: opacity .4s;
+  transition: opacity .4s; }
+  .materialboxed:hover {
+    will-change: left, top, width, height; }
+    .materialboxed:hover:not(.active) {
+      opacity: 1 !important; }
