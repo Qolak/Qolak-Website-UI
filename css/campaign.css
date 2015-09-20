@@ -12,10 +12,10 @@ i , .tabs {
 	direction: ltr;
 }
 
-.under-tab-divider {
-    width: 100%;
+.camp-creator-detail i {
+    top: -5px;
+    right: 8px;
     position: relative;
-    top: -20px;
 }
 
 .back-button {
