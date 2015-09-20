@@ -30,3 +30,13 @@
 html {
     direction: rtl;
 }
+
+i {
+    direction: initial !important;
+}
+
+.edit-button {
+    position: relative;
+    top: -325px;
+    right: 10%;
+}
