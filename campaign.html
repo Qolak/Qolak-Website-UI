@@ -218,7 +218,9 @@
 <div class="row container">
     <div class="col l8 s12 right">
 		<div class="row">	
-    		<div id="comments" class="col s12">Test 1</div>
+    		<div id="comments" class="col s12">
+
+    		</div>
     		<div id="about-qolak" class="col s12">
     			<h4 class="flow-text">درباره این قلک</h4>
     		</div>
@@ -280,7 +282,7 @@
 	</div>
 </div>
 
-  <!-- Modal Structure -->
+  <!-- Social Modal Structure -->
   <div id="Socail-modal" class="modal">
     <div class="modal-content">
       <h4>این قلک را در شبکه های اجتماعی به اشتراک بگذارید</h4>
@@ -300,6 +302,42 @@
     </div>
   </div>
 
+  <!-- Pledge Modal Structure -->
+  <div id="pledge-modal" class="modal bottom-sheet row">
+
+	<div class="light-blue lighten-1 row white-text">
+		<div class="col l8 s12 right">
+			<h3 class="award-item-title col s10">پیش پرداخت 10000 ریال یا بیشتر</h3>
+      <i class="material-icons large col s2">redeem</i>
+		</div>
+		<div class="white-text bakers col l4 s12 right valign-wrapper">
+			<div class="valign">6 پشتیبان دیگر این پاداش را انتخاب کرده اند</div>
+		</div>
+	</div>
+
+    <div class="modal-content container row">
+
+		<h5 class="col m6 s12 right">
+			اگر می خواهید مبلغ دلخواه پرداخت کنید آن را در کادر وارد کنید در غیر این صورت دکمه پرداخت را بزنید.
+    </h5>
+    <div class="col m6 s12">
+      <div class="input-field col s12">
+        <input  id="pledge_amount" type="text" class="validate">
+        <label for="pledge_amount">مبلغ به ریال</label>
+      </div>
+      <div class="col s12" style="height:100%">
+        <a class="waves-effect waves-light btn-large">
+          <i class="material-icons left">loyalty</i>
+            پرداخت
+        </a>
+      </div> 
+    </div>  
+
+
+
+    </div>
+
+  </div>
 
 
 <!--***************************************************************************-->

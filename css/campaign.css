@@ -17,8 +17,8 @@ i , .tabs {
 }
 
 .camp-creator-detail i {
- top: 5px;
-right: 0px;
+ 	top: 5px;
+	right: 0px;
     position: relative;
 }
 
@@ -80,3 +80,26 @@ right: 0px;
 .award-item:hover .content{
 	margin-right:-100%; 
 }
+
+#pledge-modal {
+    max-height: 65%;
+}
+
+#pledge-modal .award-item-title {
+	position: relative;
+	margin-top: 18px;
+}
+
+#pledge-modal .bakers {
+    font-size: 1.4rem;
+    float: right;  
+    color:#C7EDF9 !important;
+}
+
+@media only screen and (min-width: 993px){
+	#pledge-modal .bakers {
+		position: relative;
+ 	   top: 30px;
+	}
+}
+

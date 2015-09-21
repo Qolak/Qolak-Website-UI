@@ -10,7 +10,10 @@ $(document).ready(function(){
         $('#Socail-modal').openModal();
     });
 
-    
+     $(".award-item").click(function(){
+        $('#pledge-modal').openModal();
+    });
+
 
  });
 
