@@ -300,7 +300,7 @@
   </div>
 
   <!-- Not Loged-in User Pledge Modal Structure -->
-  <div id="pledge-modal-nl" class="modal bottom-sheet row pledge-modal">
+  <div id="pledge-modal" class="modal bottom-sheet row pledge-modal">
 
 	<div class="light-blue lighten-1 row white-text">
 		<div class="col l8 s12 right">
@@ -311,7 +311,7 @@
 			<div class="valign">6 پشتیبان دیگر این پاداش را انتخاب کرده اند</div>
 		</div>
 	</div>
-  <div class="modal-content container row">
+  <div class="modal-content container row not-logged">
 		<h6 class="col m7 s12 right">
 			پشتیبان گرامی برای انجام مراحل پرداخت باید وارد حساب کاربری خود شوید.اگر عضو قلک هستید وارد شوید در غیر این صورت میتوانید <a href="Register"> یک حساب کاربری برای خود بسازید</a>.
     </h6>
@@ -362,23 +362,7 @@
 
     </div>
 
-  </div>
-
-
-  <!-- Loged-in User Pledge Modal Structure -->
-  <div id="pledge-modal" class="modal bottom-sheet row pledge-modal">
-
-  <div class="light-blue lighten-1 row white-text">
-    <div class="col l8 s12 right">
-      <h3 class="award-item-title col s10">پیش پرداخت 10000 ریال یا بیشتر</h3>
-      <i class="material-icons large col s2">redeem</i>
-    </div>
-    <div class="white-text bakers col l4 s12 right valign-wrapper">
-      <div class="valign">6 پشتیبان دیگر این پاداش را انتخاب کرده اند</div>
-    </div>
-  </div>
-
-    <div class="modal-content container row">
+  <div class="modal-content container row logged">
       <!-- Campaign Creator Part-->
       <div class="col m4 s12 camp-baker right">
         <div class="col l4 m6 s4 right">
@@ -400,9 +384,9 @@
           <div class="col s12 right">
             اگر می خواهید مبلغ دلخواه پرداخت کنید آن را در کادر وارد کنید در غیر این صورت دکمه پرداخت را بزنید.
           </div>
-          <div class="col s12">
-            <a class="waves-effect waves-light btn-large">
-              <i class="material-icons left">loyalty</i>
+          <div class="col offset-s2 s10">
+            <a class="waves-effect waves-light btn-large left">
+              <i class="material-icons left">shopping_cart</i>
                 پرداخت
             </a>
           </div>          
@@ -410,11 +394,8 @@
       </div>
 
 
-
-    </div>
-
   </div>
-
+</div>
 
 <!--***************************************************************************-->
   <footer class="page-footer light-blue lighten-1">

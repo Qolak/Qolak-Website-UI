@@ -154,3 +154,7 @@ i , .tabs {
 .pledge-modal .pledge_amount_wrapper div {
 	display: inline-block;
 }
+
+.hidden {
+	display: none;
+}

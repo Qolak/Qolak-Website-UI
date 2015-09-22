@@ -11,12 +11,22 @@ $(document).ready(function(){
     });
 
     $(".award-item.not-logged").click(function(){
-        $('#pledge-modal-nl').openModal();
+        $('#pledge-modal').openModal();
+        $('#pledge-modal .logged').css("display","none");
+        $('#pledge-modal .not-logged').css("display","block");        
     });
 
     $(".award-item.logged").click(function(){
         $('#pledge-modal').openModal();
+        $('#pledge-modal .not-logged').css("display","none");
+        $('#pledge-modal .logged').css("display","block");
     });
+
+    $('#pledge_amount').keypress(function(event) {
+        if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+            event.preventDefault();
+        }
+});
 
  });
 
