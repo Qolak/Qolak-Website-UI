@@ -109,3 +109,7 @@ i {
     will-change: left, top, width, height; }
     .materialboxed:hover:not(.active) {
       opacity: 1 !important; }
+
+i.bio {
+    
+}
