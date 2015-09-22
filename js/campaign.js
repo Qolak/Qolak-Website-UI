@@ -11,7 +11,7 @@ $(document).ready(function(){
     });
 
      $(".award-item").click(function(){
-        $('#pledge-modal').openModal();
+        $('#pledge-modal-nl').openModal();
     });
 
 

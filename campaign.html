@@ -302,8 +302,8 @@
     </div>
   </div>
 
-  <!-- Pledge Modal Structure -->
-  <div id="pledge-modal" class="modal bottom-sheet row">
+  <!-- Not Loged-in User Pledge Modal Structure -->
+  <div id="pledge-modal-nl" class="modal bottom-sheet row pledge-modal">
 
 	<div class="light-blue lighten-1 row white-text">
 		<div class="col l8 s12 right">
@@ -314,11 +314,77 @@
 			<div class="valign">6 پشتیبان دیگر این پاداش را انتخاب کرده اند</div>
 		</div>
 	</div>
+  <div class="modal-content container row">
+		<h6 class="col m7 s12 right">
+			پشتیبان گرامی برای انجام مراحل پرداخت باید وارد حساب کاربری خود شوید.اگر عضو قلک هستید وارد شوید در غیر این صورت میتوانید <a href="Register"> یک حساب کاربری برای خود بسازید</a>.
+    </h6>
+    <div class="col m5 s12 right login">
+      <form name="loginform" id="" action="" method="post">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">supervisor_account</i>
+            <input name="log" id="log" type="text" value="" size="32"  required>
+            <label for="log">نام کاربری</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">lock_outline</i>
+            <input name="pwd" id="user_pass" type="password" autocomplete="off" class="validate" size="32" required>
+            <label for="user_pass">رمز عبور</label>
+          </div>
+          <div class="col m4 s6 right">
+            <button id="sendButton" class="btn btn-large waves-effect waves-light light-blue" type="button" name="action" onclick="checkLoginForm();">ورود
+              <i class="material-icons left">vpn_key</i>
+            </button>
+          </div>
+          <div class="col m8 s6">
+            <div class="input-field col s12 remember-me">
+             <input name="rememberme" type="checkbox" id="rememberme" value="forever" />
+              <label for="rememberme">مرا به خاطر بسپار</label>
+            </div>
+            <div class="col s12 forgot-pass">
+              <a href="Forgot">فراموشی رمز عبور</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--div class="col m3 s12">
+      <div class="input-field col s12 disabled">
+        <input disabled  id="pledge_amount" type="text" class="validate">
+        <label for="pledge_amount">مبلغ به ریال</label>
+      </div>
+      <div class="col s12" style="height:100%">
+        <a class="waves-effect waves-light btn-large left disabled">
+          <i class="material-icons left">loyalty</i>
+            پرداخت
+        </a>
+      </div> 
+    </div-->  
+
+
+
+    </div>
+
+  </div>
+
+
+  <!-- Loged-in User Pledge Modal Structure -->
+  <div id="pledge-modal-nl" class="modal bottom-sheet row pledge-modal">
+
+  <div class="light-blue lighten-1 row white-text">
+    <div class="col l8 s12 right">
+      <h3 class="award-item-title col s10">پیش پرداخت 10000 ریال یا بیشتر</h3>
+      <i class="material-icons large col s2">redeem</i>
+    </div>
+    <div class="white-text bakers col l4 s12 right valign-wrapper">
+      <div class="valign">6 پشتیبان دیگر این پاداش را انتخاب کرده اند</div>
+    </div>
+  </div>
 
     <div class="modal-content container row">
 
-		<h5 class="col m6 s12 right">
-			اگر می خواهید مبلغ دلخواه پرداخت کنید آن را در کادر وارد کنید در غیر این صورت دکمه پرداخت را بزنید.
+    <h5 class="col m6 s12 right">
+      اگر می خواهید مبلغ دلخواه پرداخت کنید آن را در کادر وارد کنید در غیر این صورت دکمه پرداخت را بزنید.
     </h5>
     <div class="col m6 s12">
       <div class="input-field col s12">

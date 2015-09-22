@@ -81,25 +81,59 @@ i , .tabs {
 	margin-right:-100%; 
 }
 
-#pledge-modal {
-    max-height: 65%;
+.pledge-modal {
+    max-height: 70% !important;
 }
 
-#pledge-modal .award-item-title {
+.pledge-modal .modal-content {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.pledge-modal .award-item-title {
 	position: relative;
 	margin-top: 18px;
 }
 
-#pledge-modal .bakers {
+.pledge-modal .bakers {
     font-size: 1.4rem;
     float: right;  
     color:#C7EDF9 !important;
 }
 
 @media only screen and (min-width: 993px){
-	#pledge-modal .bakers {
+	.pledge-modal .bakers {
 		position: relative;
  	   top: 30px;
 	}
 }
 
+.pledge-modal h6 {
+	font-size: 1.4rem !important;
+}
+
+.pledge-modal .login {
+	overflow: hidden;
+}
+
+.pledge-modal .login .input-field .prefix {
+    left: 15px;
+    top: 8px;
+}
+
+.pledge-modal .login .input-field label{
+	right: 0.75rem !important;
+}
+
+.pledge-modal .login .remember-me {
+	margin-top: -5px;
+	margin-bottom: 15px;
+}
+
+.pledge-modal .login .forgot-pass {
+	padding-right: 22px;
+}
+
+.modal.bottom-sheet {
+    will-change: initial !important
+}
