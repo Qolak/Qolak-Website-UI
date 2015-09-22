@@ -85,7 +85,7 @@ i , .tabs {
     max-height: 70% !important;
 }
 
-.pledge-modal .modal-content {
+#pledge-modal-nl .modal-content {
     margin-bottom: 0px !important;
     padding-bottom: 0px !important;
 }
@@ -136,4 +136,21 @@ i , .tabs {
 
 .modal.bottom-sheet {
     will-change: initial !important
+}
+
+.pledge-modal input#pledge_amount {
+	font-size: 3rem;
+} 
+
+.pledge-modal .pledge_amount_wrapper h6 {
+	margin-top: 25px;
+	display: inline-block;
+}
+
+.pledge-modal .pledge_amount_wrapper h6.s4 {
+	width:20% !important;
+}
+
+.pledge-modal .pledge_amount_wrapper div {
+	display: inline-block;
 }

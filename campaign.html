@@ -188,9 +188,6 @@
 
 				<div class="right-align camp-creator-detail"><a href="#"><i class="material-icons">assignment_ind</i>مشاهده کامل پروفایل</a></div>
 				</div>
-				<div class="">
-					
-				</div>
 			</div>
 		</div>			
 	</div>
@@ -228,7 +225,7 @@
   		</div>
 	</div>
 	<div class="col l4 hide-on-med-and-down side-awards">
-		<div class="award-item indigo lighten-5 hoverable">
+		<div class="award-item not-logged indigo lighten-5 hoverable">
 			<div class="content">
 				<div class="row teal-text">
 					<i class="material-icons right">redeem</i>
@@ -245,7 +242,7 @@
 				<h4 class="white-text valign center-align">این پاداش را انتخاب کنید</h4>
 			</div>
 		</div>
-		<div class="award-item indigo lighten-5 hoverable">
+		<div class="award-item logged indigo lighten-5 hoverable">
 			<div class="content">
 				<div class="row teal-text">
 					<i class="material-icons right">redeem</i>
@@ -262,7 +259,7 @@
 				<h4 class="white-text valign center-align">این پاداش را انتخاب کنید</h4>
 			</div>
 		</div>
-		<div class="award-item indigo lighten-5 hoverable">
+		<div class="award-item logged indigo lighten-5 hoverable">
 			<div class="content">
 				<div class="row teal-text">
 					<i class="material-icons right">redeem</i>
@@ -369,7 +366,7 @@
 
 
   <!-- Loged-in User Pledge Modal Structure -->
-  <div id="pledge-modal-nl" class="modal bottom-sheet row pledge-modal">
+  <div id="pledge-modal" class="modal bottom-sheet row pledge-modal">
 
   <div class="light-blue lighten-1 row white-text">
     <div class="col l8 s12 right">
@@ -382,22 +379,35 @@
   </div>
 
     <div class="modal-content container row">
+      <!-- Campaign Creator Part-->
+      <div class="col m4 s12 camp-baker right">
+        <div class="col l4 m6 s4 right">
+            <img class="responsive-img profile-img" src="img/psyringe.jpg">
+        </div>  
+        <div class="col l8 m6 s8 right-align">
+          <h5>محمد رضا حاجیانپور</h5>
+          <div class="camp-creator-detail grey-text"><i class="material-icons">web</i>Qolak.com</div>
 
-    <h5 class="col m6 s12 right">
-      اگر می خواهید مبلغ دلخواه پرداخت کنید آن را در کادر وارد کنید در غیر این صورت دکمه پرداخت را بزنید.
-    </h5>
-    <div class="col m6 s12">
-      <div class="input-field col s12">
-        <input  id="pledge_amount" type="text" class="validate">
-        <label for="pledge_amount">مبلغ به ریال</label>
+        <div class="right-align camp-creator-detail"><a href="#"><i class="material-icons">assignment_ind</i>مشاهده کامل پروفایل</a></div>
+        </div>
       </div>
-      <div class="col s12" style="height:100%">
-        <a class="waves-effect waves-light btn-large">
-          <i class="material-icons left">loyalty</i>
-            پرداخت
-        </a>
-      </div> 
-    </div>  
+      <div class="col m8 s12 pledge_amount_wrapper">
+          <h6 class="col s4 right-align right">مبلغ پرداختی :</h6>
+          <div class="input-field col s7 left-align right">
+           <input id="pledge_amount" type="text" class="validate" value="67000">
+          </div>
+          <h6 class="col s1 right-align right">ریال</h6>
+          <div class="col s12 right">
+            اگر می خواهید مبلغ دلخواه پرداخت کنید آن را در کادر وارد کنید در غیر این صورت دکمه پرداخت را بزنید.
+          </div>
+          <div class="col s12">
+            <a class="waves-effect waves-light btn-large">
+              <i class="material-icons left">loyalty</i>
+                پرداخت
+            </a>
+          </div>          
+
+      </div>
 
 
 

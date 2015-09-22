@@ -10,10 +10,13 @@ $(document).ready(function(){
         $('#Socail-modal').openModal();
     });
 
-     $(".award-item").click(function(){
+    $(".award-item.not-logged").click(function(){
         $('#pledge-modal-nl').openModal();
     });
 
+    $(".award-item.logged").click(function(){
+        $('#pledge-modal').openModal();
+    });
 
  });
 
