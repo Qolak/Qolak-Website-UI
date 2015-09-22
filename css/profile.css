@@ -27,18 +27,14 @@
     border-style: solid;
 
     transition: 0.40s filter ease-out;
-    -webkit-transition: 0.40s -webkit-filter ease-out;
-    -moz-transition: 0.40s -moz-filter ease-out;
-    -ms-transition: 0.40s -ms-filter ease-out;
-    -o-transition: 0.40s -o-filter ease-out;
+    -webkit-transition: 0.40s filter ease-out;
+    -moz-transition: 0.40s filter ease-out;
+    -ms-transition: 0.40s filter ease-out;
+    -o-transition: 0.40s filter ease-out;
 }
 
 .avatar-container img:hover {
     filter: blur(0.5px) brightness(90%);
-    -webkit-filter: blur(0.5px) brightness(90%);
-    -moz-filter: blur(0.5px) brightness(90%);
-    -ms-filter: blur(0.5px) brightness(90%);
-    -o-filter: blur(0.5px) brightness(90%);
 }
 
 html {
