@@ -1,0 +1,19 @@
+/* Sort By wrapper css*/
+.sort-by span {
+	left:0 !important;
+	right: auto !important;
+}
+
+.sort-by ul.dropdown-content li {
+	text-align: right !important;
+}
+
+.sort-by input.select-dropdown {
+    font-size: 2rem;
+    padding-right: 0.5rem;
+}
+
+.sort-by .select-wrapper {
+	position: relative;
+	top:0.5rem;
+}
