@@ -20,8 +20,12 @@
 	font-style: normal;
 }
 
+.material-icons {
+	direction: ltr !important; 
+}
+
 nav .brand-logo {
-	margin-right: 4rem !important;
+	margin-right: 2rem !important;
 }
 
 nav ul a.brand-logo {
@@ -29,12 +33,22 @@ nav ul a.brand-logo {
 	padding-top: 4px !important;
 }
 
-nav .brand-logo.center {
-    left: 25% !important;
+nav .brand-logo {
+    right: 2rem !important;
 }
+
+nav ul#dropdown-container {
+	position: relative;
+	right: 2rem !important;
+}
+
 @media only screen and (max-width : 992px) {
     nav .brand-logo {
-    	left: 25% !important;
+    	right: 38% !important;
+    } 
+
+    nav ul#dropdown-container {
+    	right: 0 !important;
     } 
 }
 
@@ -88,13 +102,28 @@ nav ul a i#arrow {
 	top: 12px !important;
 }
 
-nav ul#searchbar li{
-	height: 40px !important;
+nav ul#top-button-container a {
+    padding: 0 10px !important;
+}
+
+nav ul#searchbar {
 	position: relative !important;
+	right: 2rem;
+	width: 35% !important;
+}
+
+@media only screen and (max-width: 1100px){
+	nav ul#searchbar {
+    	width: 29% !important;
+	}
+}
+
+nav ul#searchbar li{
+	position: relative !important;
+	height: 40px !important;
 	top: 10px !important;
-  right: 120px !important;
+	width: 100% !important;
 	line-height: 0px !important;
-  width: 145% !important;
 }
 
 nav ul#searchbar i{
@@ -104,11 +133,19 @@ nav ul#searchbar i{
 
 nav ul#searchbar form div{
 	height: 40px !important;
-  	width: inherit;
+	width: inherit;
+}
+
+nav .top-nav-logo {
+	max-height: 70px;
 }
 
 .side-nav {
 	background-color: #DADADA !important; /*Gray*/
+}
+
+.side-nav li {
+	padding: 0px !important; 
 }
 
 .side-nav li:hover, .side-nav li.active {
@@ -150,4 +187,7 @@ nav ul li form#search i {
 
 .input-field input[type=search]:focus + label i {
   color: #fff !important; 
+}
+nav ul#top-button-container i {
+	margin-top: 20px;
 }
