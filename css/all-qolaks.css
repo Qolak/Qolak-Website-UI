@@ -17,11 +17,22 @@
 	position: relative;
 	top:0.5rem;
 }
+/* Search section  css*/
 
+.camp-search i {
+    position: relative;
+    top: 10px;
+}
+
+.camp-search .input-field input[type=search]:focus + label i {
+    color: #9E9E9E !important;
+}
 /* Featured wrapper css*/
 .featured {
 	padding-bottom: 20px;	
+	margin-top: -5px;
 }
+
 .featured .card {
 	top: 1rem ;
 }

@@ -108,3 +108,12 @@ body div ul#user-dropdown li {
 	color: #000 !important;
 	letter-spacing: 0px !important;
 }
+
+.input-field input[type=search]:focus {
+    background-color: #F1F1F1 !important;
+    color: #808080 !important;
+}
+
+.input-field input[type=search] {
+    color: #FFFFFF !important;
+}
