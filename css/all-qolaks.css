@@ -17,3 +17,11 @@
 	position: relative;
 	top:0.5rem;
 }
+
+/* Featured wrapper css*/
+.featured {
+	padding-bottom: 20px;	
+}
+.featured .card {
+	top: 1rem ;
+}
