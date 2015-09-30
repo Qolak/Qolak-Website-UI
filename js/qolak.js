@@ -6,21 +6,8 @@ $(document).ready(function() {
 		$("input#search-field").val(this.value);
 	});
 
-	for (var i = 0; i < 3; i++)
-    	$(".card-obj").clone().appendTo(".items-row");
-    
-
-    $('.pie_progress').asPieProgress({
-        namespace: 'pie_progress'
-    });
-
-    $('.pie_day').asPieProgress({
-        namespace: 'pie_day',
-        label: function(n) {
-        var percentage = this.getPercentage(n);
-        return percentage;
-    }
-    });
+	/*for (var i = 0; i < 3; i++)
+    	$(".card-obj").clone().appendTo(".items-row");*/
  
 var options = [
     {selector: '.pie_progress', offset: 150, callback: '$(".pie_progress").asPieProgress("go");'}
