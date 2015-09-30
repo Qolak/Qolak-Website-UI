@@ -18,7 +18,6 @@
 	top:0.5rem;
 }
 /* Search section  css*/
-
 .camp-search i {
     position: relative;
     top: 10px;
@@ -30,7 +29,7 @@
 /* Featured wrapper css*/
 .featured {
 	padding-bottom: 20px;	
-	margin-top: -5px;
+	margin-top: -55px;
 }
 
 .featured .card {

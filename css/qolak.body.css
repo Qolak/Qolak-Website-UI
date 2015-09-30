@@ -51,3 +51,19 @@ body div ul#user-dropdown li {
 .input-field input[type=search] {
     color: #FFFFFF !important;
 }
+
+.followMeBar {
+  position: relative;
+  z-index: 1003;
+}
+.followMeBar.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1004;
+  margin-top:0px;
+}
+.followMeBar.fixed.absolute {
+  position: absolute;
+}

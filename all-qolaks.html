@@ -40,7 +40,7 @@
 
 <body>
   <div id="introDiv" data-intro="به قلک خوش آمدید!" data-step="1" data-position="bottom"></div>
-  <div class="navbar-fixed" data-intro="برای شروع، میتوانید یک قلک بسازید تا مردم از شما حمایت مالی کنند! همچنین میتوانید در سایت جستجو کنید یا به مجله های ما که حاوی آخرین اخبار مربوط به قلک است، سری بزنید!" data-step="2" data-position="bottom">
+  <div class="followMeBar" data-intro="برای شروع، میتوانید یک قلک بسازید تا مردم از شما حمایت مالی کنند! همچنین میتوانید در سایت جستجو کنید یا به مجله های ما که حاوی آخرین اخبار مربوط به قلک است، سری بزنید!" data-step="2" data-position="bottom">
 
   <!--User Dropdown Initialization-->
 
@@ -53,7 +53,6 @@
     </ul>
 
     <!--Top Navigation Bar-->
-
     <nav class="light-blue lighten-1" role="navigation">
       <div class="container">
 
@@ -130,28 +129,30 @@
   </div>
   <!-- ******************************************************************** -->
   <!-- Sort By sectrion -->
-  <div class="sort-by container">
-    <div class="input-field row">
-      <h4 class="col s6 m4  right">مرتب سازی بر اساس</h4>
-      <div class="select-wrapper col s6 m5 offset-m3">
-        <select>
-          <option value="0" selected>همینجوری</option>
-          <option value="1">جدیدترین</option>
-          <option value="2">محبوبترین</option>
-          <option value="3">رو به پایان</option>
-        </select>
+  <div class="followMeBar white">
+    <div class="sort-by container">
+      <div class="input-field row">
+        <h4 class="col s6 m5  right">مرتب سازی بر اساس</h4>
+        <div class="select-wrapper col s6 m5 offset-m2">
+          <select>
+            <option value="0" selected>همینجوری</option>
+            <option value="1">جدیدترین</option>
+            <option value="2">محبوبترین</option>
+            <option value="3">رو به پایان</option>
+          </select>
+        </div>
       </div>
     </div>
+    <!-- Search sectrion -->
+    <nav class="blue darken-2 camp-search">
+      <form class="container">
+        <div class="input-field" style="  ">
+          <input placeholder="جستجو در میان قلک ها" id="search-camp" type="search" required>
+          <label for="search-camp"><i class="material-icons">search</i></label>
+        </div>
+      </form> 
+    </nav>
   </div>
-  <!-- Search sectrion -->
-  <nav class="blue darken-2 camp-search">
-    <form class="container">
-      <div class="input-field" style="  ">
-        <input placeholder="جستجو در میان قلک ها" id="search-camp" type="search" required>
-        <label for="search-camp"><i class="material-icons">search</i></label>
-      </div>
-    </form> 
-  </nav>
   <!-- Featured sectrion -->
   <div class="indigo lighten-5 featured">
     <div class="container">
@@ -301,7 +302,7 @@
               </div>
           </div>
         </div>
-        
+
     </div>
 
   </div>
