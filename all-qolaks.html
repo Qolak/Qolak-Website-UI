@@ -135,16 +135,22 @@
   <div class="followMeBar white">
     <div class="sort-by container">
       <div class="input-field row">
-        <h4 class="col s6 m5  right">مرتب سازی بر اساس</h4>
-        <div class="select-wrapper col s6 m5 offset-m2">
+        <h4 class="col s6 m5 right">مرتب سازی بر اساس</h4>
+        <div class="select-wrapper col s6 m5 right">
           <select id="filters">
             <option value="all" selected>همینجوری</option>
             <option class="filter"  value=".featured-item">جدیدترین</option>
             <option value=".recent-item">محبوبترین</option>
             <option value=".featured-item">رو به پایان</option>
           </select>
+          </div>
+          <div class="select-wrapper col s6 m2 left">
+          <select id="orders">
+            <option value="items-order:asc" selected>صعودی</option>
+            <option value="items-order:desc">نزولی</option>
+          </select>
+          </div>
         </div>
-      </div>
     </div>
     <!-- Search sectrion -->
     <nav class="blue darken-2 camp-search">
@@ -157,7 +163,7 @@
     </nav>
   </div>
   <!-- Featured sectrion -->
-  <div class="indigo lighten-5 featured">
+  <div class="indigo lighten-5 hide-on-sort">
     <div class="container">
       <div class="row section white card hoverable">
         <!-- Campaign Title -->
@@ -195,7 +201,7 @@
     </div>
   </div>
   <!-- Recommended sectrion -->
-  <div class="row container">
+  <div class="row container hide-on-sort">
     <div class="col s12 m6">
       <h3 class="center">جدیدترین ها</h3>
         <!--Card Item-->
@@ -307,18 +313,12 @@
         <h5 class="center more-popular"><a href="#">پربازدیدهای بیشتر</a></h5>
     </div>
   </div>
-<button class="sort" data-sort="my-order:asc">Ascending Order</button>
-<button class="sort" data-sort="my-order:desc">Descending Order</button>
- 
-<button class="filter" data-filter=".all-items">all-items</button>
-<button class="filter" data-filter=".recent-item">recent-item</button>
-<button class="filter" data-filter=".featured-item">featured-item</button>
   <!-- All qolaks sectrion -->  
   <div class="indigo lighten-5 all-qolaks-wrapper">
     <div id="Container" class="container row right-align">
     <h4>در میان 67 قلک ما بگردید</h4>
         <!--Card Item-->
-        <div class="card-obj col s12 m6 l4 right mix featured-item recent-item" data-my-order="1">
+        <div class="card-obj col s12 m6 l4 right mix featured-item recent-item" data-items-order="1">
           <div class="card hoverable card-item">
               <!--Item Image Container-->
               <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
@@ -369,7 +369,7 @@
           </div>
         </div>    
         <!--Card Item-->
-        <div class="card-obj col s12 m6 l4 right mix featured-item" data-my-order="2">
+        <div class="card-obj col s12 m6 l4 right mix featured-item" data-items-order="2">
           <div class="card hoverable card-item">
               <!--Item Image Container-->
               <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
@@ -420,7 +420,7 @@
           </div>
         </div>  
         <!--Card Item-->
-        <div class="card-obj col s12 m6 l4 right mix recent-item" data-my-order="3">
+        <div class="card-obj col s12 m6 l4 right mix recent-item" data-items-order="3">
           <div class="card hoverable card-item">
               <!--Item Image Container-->
               <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
@@ -471,7 +471,7 @@
           </div>
         </div>  
         <!--Card Item-->
-        <div class="card-obj col s12 m6 l4 right mix featured-item recent-item" data-my-order="4">
+        <div class="card-obj col s12 m6 l4 right mix featured-item recent-item" data-items-order="4">
           <div class="card hoverable card-item">
               <!--Item Image Container-->
               <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
