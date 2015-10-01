@@ -21,7 +21,10 @@
   <!--JavaScript Import-->
   <script src="js/jquery.min.js"></script>
   <script src="js/materialize.min.js"></script>
-    <!--IntroJS JavaScript Import-->
+
+  <script src="js/jquery.mixitup.min.js"></script>
+
+  <!--IntroJS JavaScript Import-->
   <script src="js/intro.min.js"></script>
   <!--Scripts for initializing some objects for materializecss-->
   <script src="js/qolak.js"></script>
@@ -134,11 +137,11 @@
       <div class="input-field row">
         <h4 class="col s6 m5  right">مرتب سازی بر اساس</h4>
         <div class="select-wrapper col s6 m5 offset-m2">
-          <select>
-            <option value="0" selected>همینجوری</option>
-            <option value="1">جدیدترین</option>
-            <option value="2">محبوبترین</option>
-            <option value="3">رو به پایان</option>
+          <select id="filters">
+            <option value="all" selected>همینجوری</option>
+            <option class="filter"  value=".featured-item">جدیدترین</option>
+            <option value=".recent-item">محبوبترین</option>
+            <option value=".featured-item">رو به پایان</option>
           </select>
         </div>
       </div>
@@ -304,7 +307,222 @@
         <h5 class="center more-popular"><a href="#">پربازدیدهای بیشتر</a></h5>
     </div>
   </div>
-
+<button class="sort" data-sort="my-order:asc">Ascending Order</button>
+<button class="sort" data-sort="my-order:desc">Descending Order</button>
+ 
+<button class="filter" data-filter=".all-items">all-items</button>
+<button class="filter" data-filter=".recent-item">recent-item</button>
+<button class="filter" data-filter=".featured-item">featured-item</button>
+  <!-- All qolaks sectrion -->  
+  <div class="indigo lighten-5 all-qolaks-wrapper">
+    <div id="Container" class="container row right-align">
+    <h4>در میان 67 قلک ما بگردید</h4>
+        <!--Card Item-->
+        <div class="card-obj col s12 m6 l4 right mix featured-item recent-item" data-my-order="1">
+          <div class="card hoverable card-item">
+              <!--Item Image Container-->
+              <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
+              <!--Card Title-->
+              <div class="row item-detail white">  
+                <div class="col s12">
+                  <h5>
+                    <a href="http://poolpol.com/campaigns/100-artists-100-interviews/">۱۰1 هنرمند، ۱۰1 مصاحبه</a>
+                  </h5>
+                </div>
+                <!--Card Description-->
+                <div class="col s12 desc">
+                  هنرمندان سرشناس ایرانی چگونه پول لازم برای پروژه‌های هنری‌شان را تهیه می‌کردند؟ به‌ویژه زمانی که هنوز سرشناس نبودند؟
+                </div>
+                <div class="row divider"></div>
+                <!--Card Item Details-->
+                <div class="item-row">
+                  <div class="row ">
+                    <!--Card Item Progress Pie-->
+                    <div class="col s4">
+                      <div class="left pie">
+                        <input class="progKnob pie" value="55" data-label="55%" data-angleOffset='-125' data-angleArc='250'>
+                      </div>
+                    </div>
+                    <!--Card Item Pledge Amount-->
+                    <div class="col s8">
+                      <div class="row">
+                        پیش‌پرداخت‌ها:<span> 3,670,000 ریال </span>
+                      </div>
+                      <div class="row">
+                        <!--Card Item Bakers-->
+                        <div class="col s7 right center-align white-text light-blue lighten-1">
+                          <p>پشتیبان‌ها</p><span> 5 </span>
+                        </div>
+                        <!--Card Item Days Pie-->
+                        <div class="col s4 right pie">
+                          <input class="dayKnob pie" value="20" data-label="20 روز" data-angleOffset='-125' data-angleArc='250'>
+                        </div>
+                      </div>
+                    </div>             
+                  </div>
+                  <!--Card Item Location-->
+                  <div class="row light-blue darken-4 card-location white-text">
+                    <i class="material-icons tiny">room</i>ایران
+                  </div>
+                </div> 
+              </div>
+          </div>
+        </div>    
+        <!--Card Item-->
+        <div class="card-obj col s12 m6 l4 right mix featured-item" data-my-order="2">
+          <div class="card hoverable card-item">
+              <!--Item Image Container-->
+              <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
+              <!--Card Title-->
+              <div class="row item-detail white">  
+                <div class="col s12">
+                  <h5>
+                    <a href="http://poolpol.com/campaigns/100-artists-100-interviews/">۱۰2 هنرمند، ۱۰2 مصاحبه</a>
+                  </h5>
+                </div>
+                <!--Card Description-->
+                <div class="col s12 desc">
+                  هنرمندان سرشناس ایرانی چگونه پول لازم برای پروژه‌های هنری‌شان را تهیه می‌کردند؟ به‌ویژه زمانی که هنوز سرشناس نبودند؟
+                </div>
+                <div class="row divider"></div>
+                <!--Card Item Details-->
+                <div class="item-row">
+                  <div class="row ">
+                    <!--Card Item Progress Pie-->
+                    <div class="col s4">
+                      <div class="left pie">
+                        <input class="progKnob pie" value="55" data-label="55%" data-angleOffset='-125' data-angleArc='250'>
+                      </div>
+                    </div>
+                    <!--Card Item Pledge Amount-->
+                    <div class="col s8">
+                      <div class="row">
+                        پیش‌پرداخت‌ها:<span> 3,670,000 ریال </span>
+                      </div>
+                      <div class="row">
+                        <!--Card Item Bakers-->
+                        <div class="col s7 right center-align white-text light-blue lighten-1">
+                          <p>پشتیبان‌ها</p><span> 5 </span>
+                        </div>
+                        <!--Card Item Days Pie-->
+                        <div class="col s4 right pie">
+                          <input class="dayKnob pie" value="20" data-label="20 روز" data-angleOffset='-125' data-angleArc='250'>
+                        </div>
+                      </div>
+                    </div>             
+                  </div>
+                  <!--Card Item Location-->
+                  <div class="row light-blue darken-4 card-location white-text">
+                    <i class="material-icons tiny">room</i>ایران
+                  </div>
+                </div> 
+              </div>
+          </div>
+        </div>  
+        <!--Card Item-->
+        <div class="card-obj col s12 m6 l4 right mix recent-item" data-my-order="3">
+          <div class="card hoverable card-item">
+              <!--Item Image Container-->
+              <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
+              <!--Card Title-->
+              <div class="row item-detail white">  
+                <div class="col s12">
+                  <h5>
+                    <a href="http://poolpol.com/campaigns/100-artists-100-interviews/">۱۰3 هنرمند، ۱۰3 مصاحبه</a>
+                  </h5>
+                </div>
+                <!--Card Description-->
+                <div class="col s12 desc">
+                  هنرمندان سرشناس ایرانی چگونه پول لازم برای پروژه‌های هنری‌شان را تهیه می‌کردند؟ به‌ویژه زمانی که هنوز سرشناس نبودند؟
+                </div>
+                <div class="row divider"></div>
+                <!--Card Item Details-->
+                <div class="item-row">
+                  <div class="row ">
+                    <!--Card Item Progress Pie-->
+                    <div class="col s4">
+                      <div class="left pie">
+                        <input class="progKnob pie" value="55" data-label="55%" data-angleOffset='-125' data-angleArc='250'>
+                      </div>
+                    </div>
+                    <!--Card Item Pledge Amount-->
+                    <div class="col s8">
+                      <div class="row">
+                        پیش‌پرداخت‌ها:<span> 3,670,000 ریال </span>
+                      </div>
+                      <div class="row">
+                        <!--Card Item Bakers-->
+                        <div class="col s7 right center-align white-text light-blue lighten-1">
+                          <p>پشتیبان‌ها</p><span> 5 </span>
+                        </div>
+                        <!--Card Item Days Pie-->
+                        <div class="col s4 right pie">
+                          <input class="dayKnob pie" value="20" data-label="20 روز" data-angleOffset='-125' data-angleArc='250'>
+                        </div>
+                      </div>
+                    </div>             
+                  </div>
+                  <!--Card Item Location-->
+                  <div class="row light-blue darken-4 card-location white-text">
+                    <i class="material-icons tiny">room</i>ایران
+                  </div>
+                </div> 
+              </div>
+          </div>
+        </div>  
+        <!--Card Item-->
+        <div class="card-obj col s12 m6 l4 right mix featured-item recent-item" data-my-order="4">
+          <div class="card hoverable card-item">
+              <!--Item Image Container-->
+              <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
+              <!--Card Title-->
+              <div class="row item-detail white">  
+                <div class="col s12">
+                  <h5>
+                    <a href="http://poolpol.com/campaigns/100-artists-100-interviews/">۱۰4 هنرمند، ۱۰4 مصاحبه</a>
+                  </h5>
+                </div>
+                <!--Card Description-->
+                <div class="col s12 desc">
+                  هنرمندان سرشناس ایرانی چگونه پول لازم برای پروژه‌های هنری‌شان را تهیه می‌کردند؟ به‌ویژه زمانی که هنوز سرشناس نبودند؟
+                </div>
+                <div class="row divider"></div>
+                <!--Card Item Details-->
+                <div class="item-row">
+                  <div class="row ">
+                    <!--Card Item Progress Pie-->
+                    <div class="col s4">
+                      <div class="left pie">
+                        <input class="progKnob pie" value="55" data-label="55%" data-angleOffset='-125' data-angleArc='250'>
+                      </div>
+                    </div>
+                    <!--Card Item Pledge Amount-->
+                    <div class="col s8">
+                      <div class="row">
+                        پیش‌پرداخت‌ها:<span> 3,670,000 ریال </span>
+                      </div>
+                      <div class="row">
+                        <!--Card Item Bakers-->
+                        <div class="col s7 right center-align white-text light-blue lighten-1">
+                          <p>پشتیبان‌ها</p><span> 5 </span>
+                        </div>
+                        <!--Card Item Days Pie-->
+                        <div class="col s4 right pie">
+                          <input class="dayKnob pie" value="20" data-label="20 روز" data-angleOffset='-125' data-angleArc='250'>
+                        </div>
+                      </div>
+                    </div>             
+                  </div>
+                  <!--Card Item Location-->
+                  <div class="row light-blue darken-4 card-location white-text">
+                    <i class="material-icons tiny">room</i>ایران
+                  </div>
+                </div> 
+              </div>
+          </div>
+        </div>      
+    </div>
+  </div>
   <!-- ******************************************************************** -->
   <footer class="page-footer light-blue lighten-1">
     <div class="container">
