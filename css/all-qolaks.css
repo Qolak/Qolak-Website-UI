@@ -43,3 +43,7 @@
 #Container .mix{
     display: none;
 }
+.featured.hide-on-sort {
+	margin-top: -10%;
+	padding-top: 25px;
+}
