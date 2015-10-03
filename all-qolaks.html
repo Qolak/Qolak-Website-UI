@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <!--CSS Import-->
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/qolak.header.css">
+  <link rel="stylesheet" href="css/qolak.body.css">
+  <link rel="stylesheet" href="css/qolak.footer.css">
+  <!--IntroJS CSS Import-->
+  <link rel="stylesheet" href="css/introjs.min.css">
+  <link rel="stylesheet" href="css/introjs-rtl.min.css">
+  <link rel="stylesheet" href="img/intro-themes/introjs-nassim.css">
+
+  <!--JavaScript Import-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+
+  <script src="js/jquery.mixitup.min.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>
+
+  <!--IntroJS JavaScript Import-->
+  <script src="js/intro.min.js"></script>
+  <!--Scripts for initializing some objects for materializecss-->
+  <script src="js/qolak.js"></script>
+  <script type="text/javascript" src="js/jquery-asPieProgress.js"></script>
+  <!--All-qolaks CSS Import-->
+  <link rel="stylesheet" href="css/all-qolaks.css">
+  <!--All-qolaks JavaScript Import-->
+  <script src="js/all-qolaks.js"></script>
+  <!--Card-item CSS Import-->
+  <link rel="stylesheet" href="css/card-item.css">
+  <!--Card-item JavaScript Import-->
+  <script src="js/jquery.knob.js"></script>
+  <script src="js/card-item.js"></script>
+
+</head>
+
+<body>
+  <div id="introDiv" data-intro="به قلک خوش آمدید!" data-step="1" data-position="bottom"></div>
+  <div class="followMeBar" data-intro="برای شروع، میتوانید یک قلک بسازید تا مردم از شما حمایت مالی کنند! همچنین میتوانید در سایت جستجو کنید یا به مجله های ما که حاوی آخرین اخبار مربوط به قلک است، سری بزنید!" data-step="2" data-position="bottom">
+
+  <!--User Dropdown Initialization-->
+
+    <ul id="user-dropdown" class="dropdown-content">
+      <li><a href="http://qolak.com/user/profile">حساب کاربری</a></li>
+      <li><a href="http://qolak.com/user/settings">تنظیمات</a></li>
+      <li><a href="http://qolak.com/user/qolak">قلک من</a></li>
+      <li class="divider"></li>
+      <li><a href="http://qolak.com/logout">خروج</a></li>
+    </ul>
+
+    <!--Top Navigation Bar-->
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="container">
+
+        <!--Logo Container-->
+        <ul id="logo-container" class="right">
+          <li>
+            <a href="http://qolak.com" class="brand-logo right">قلک</a>
+          </li>
+        </ul>
+
+        <!--User Dropdown Container-->
+        <ul id="dropdown-container" class="right">
+          <li>
+            <a href="" class="dropdown-button" data-activates="user-dropdown" data-beloworigin="true"><i id="arrow" class="material-icons small">arrow_drop_down</i>آقای محمدی</a>
+          </li>
+        </ul>
+
+        <!--Search-Field for Large Screen-->
+        <input id="search-field" type="hidden" value="mehrdad">
+        <ul id="searchbar" class="right hide-on-med-and-down">
+          <li>
+            <form>
+              <div class="input-field">
+                <input id="search" type="search" required class="search-field">
+                <label for="search"><i class="material-icons">search</i></label>
+              </div>
+            </form>
+          </li>
+        </ul>
+
+        <!--Sidebar Menu Button-->
+        <a id="menu-button" href="" data-activates="nav-mobile" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+
+        <!--Top Links Container-->
+        <ul id="top-button-container" class="hide-on-med-and-down left">
+          <li>
+            <a id="introButton" href="#" onclick="startIntro();"><i class="material-icons left">live_help</i>راهنمایی</a>
+          </li>
+          <li>
+            <a href="http://qolak.com/blog"><i class="material-icons left">description</i>مجله</a>
+          </li>
+          <li class="active">
+            <a href="http://qolak.com/create"><i class="material-icons left">queue</i>ساخت قلک</a>
+          </li>
+        </ul>
+
+        <!--Sidebar Items-->
+        <ul id="nav-mobile" class="side-nav">
+          <li id="sidebar-title" class="light-blue darken-1">
+            <h4 style="border-bottom: 2px; padding-bottom:5px;">منو</h4>
+          </li>
+
+          <li id="search-li" class="center hide-on-large-only">
+            <form id="search">
+              <div class="input-field">
+                <input placeholder="جستجو" id="sidebar-search" type="text" class="search-field">
+                <label for="sidebar-search"><i class="material-icons">search</i></label>
+              </div>
+            </form>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#" onclick="startIntro();">راهنمایی</a>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#">ساخت قلک</a>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#">مجله</a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+  </div>
+  <!-- ******************************************************************** -->
+  <!-- Sort By sectrion -->
+  <div class="followMeBar white">
+    <div class="sort-by container">
+      <div class="input-field row">
+        <h4 class="col s6 m5 right">مرتب سازی بر اساس</h4>
+        <div class="select-wrapper col s6 m5 right">
+          <select id="filters">
+            <option value="all" selected>همینجوری</option>
+            <option class="filter"  value=".featured-item">جدیدترین</option>
+            <option value=".recent-item">محبوبترین</option>
+            <option value=".featured-item">رو به پایان</option>
+          </select>
+          </div>
+          <div class="select-wrapper col s6 m2 left">
+          <select id="orders">
+            <option value="items-order:asc" selected>صعودی</option>
+            <option value="items-order:desc">نزولی</option>
+          </select>
+          </div>
+        </div>
+    </div>
+    <!-- Search sectrion -->
+    <nav class="blue darken-2 camp-search">
+      <form class="container">
+        <div class="input-field" style="  ">
+          <input placeholder="جستجو در میان قلک ها" id="search-camp" type="search" required>
+          <label for="search-camp"><i class="material-icons">search</i></label>
+        </div>
+      </form> 
+    </nav>
+  </div>
+  <!-- Featured sectrion -->
+  <div class="indigo lighten-5 hide-on-sort featured">
+    <div class="container">
+      <div class="row section white card hoverable">
+        <!-- Campaign Title -->
+        <div class="col m6 s12 right">
+          <a href="campaign.html">
+            <h3>پروژه کمک به نیازمندان</h3>
+          </a>
+          <div class="flow-text">توضیحات مختصر درباره این کمپینتوضیحات مختصر درباره</div>
+          <div class="progress light-blue lighten-4">
+              <div class="determinate blue" style="width: 70%"></div>
+          </div>
+          <!-- Pledges Amount-->
+          <div class="col m6 s12 row center">
+            <h5 class="col s12">67,000 ریال</h5>
+            <h6 class="grey-text">از 100,000 ریال جمع آوری شده</h6>
+          </div>  
+          <!-- Bakers -->
+          <div class="col m3 s12 row center">
+            <h5 class="col s12">67</h5>
+            <h6 class="grey-text">پشتیبان</h6>
+          </div>  
+          <!-- Remained Days -->
+          <div class="col m3 s12 row center">
+            <h5 class="col s12">42</h5>
+            <h6 class="grey-text">روز باقی مانده</h6>
+          </div>  
+        </div>
+        <!-- Campaign Image/video --> 
+        <div class="col m6 s12 left center-align waves-effect waves-light">
+          <a href="campaign.html">
+            <img class="responsive-img" src="img/camp.png">    
+          </a>
+        </div>
+      </div>   
+    </div>
+  </div>
+  <!-- Recommended sectrion -->
+  <div class="row container hide-on-sort">
+    <div class="col s12 m6">
+      <h3 class="center">جدیدترین ها</h3>
+        <!--Card Item-->
+        <div class="card-obj col s12 l9 offset-l1">
+          <div class="card hoverable card-item">
+              <!--Item Image Container-->
+              <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
+              <!--Card Title-->
+              <div class="row item-detail white">  
+                <div class="col s12">
+                  <h5>
+                    <a href="http://poolpol.com/campaigns/100-artists-100-interviews/">۱۰۰ هنرمند، ۱۰۰ مصاحبه</a>
+                  </h5>
+                </div>
+                <!--Card Description-->
+                <div class="col s12 desc">
+                  هنرمندان سرشناس ایرانی چگونه پول لازم برای پروژه‌های هنری‌شان را تهیه می‌کردند؟ به‌ویژه زمانی که هنوز سرشناس نبودند؟
+                </div>
+                <div class="row divider"></div>
+                <!--Card Item Details-->
+                <div class="item-row">
+                  <div class="row ">
+                    <!--Card Item Progress Pie-->
+                    <div class="col s4">
+                      <div class="left pie">
+                        <input class="progKnob pie" value="55" data-label="55%" data-angleOffset='-125' data-angleArc='250'>
+                      </div>
+                    </div>
+                    <!--Card Item Pledge Amount-->
+                    <div class="col s8">
+                      <div class="row">
+                        پیش‌پرداخت‌ها:<span> 3,670,000 ریال </span>
+                      </div>
+                      <div class="row">
+                        <!--Card Item Bakers-->
+                        <div class="col s7 right center-align white-text light-blue lighten-1">
+                          <p>پشتیبان‌ها</p><span> 5 </span>
+                        </div>
+                        <!--Card Item Days Pie-->
+                        <div class="col s4 right pie">
+                          <input class="dayKnob pie" value="20" data-label="20 روز" data-angleOffset='-125' data-angleArc='250'>
+                        </div>
+                      </div>
+                    </div>             
+                  </div>
+                  <!--Card Item Location-->
+                  <div class="row light-blue darken-4 card-location white-text">
+                    <i class="material-icons tiny">room</i>ایران
+                  </div>
+                </div> 
+              </div>
+          </div>
+        </div>
+        <h5 class="center more-new"><a href="#">جدیدهای بیشتر</a></h5>
+    </div>
+    <div class="col s12 m6">
+      <h3 class="center">محبوبترین ها</h3>
+        <!--Card Item-->
+        <div class="card-obj col s12 l9 offset-l1">
+          <div class="card hoverable card-item">
+              <!--Item Image Container-->
+              <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
+              <!--Card Title-->
+              <div class="row item-detail white">  
+                <div class="col s12">
+                  <h5>
+                    <a href="http://poolpol.com/campaigns/100-artists-100-interviews/">۱۰۰ هنرمند، ۱۰۰ مصاحبه</a>
+                  </h5>
+                </div>
+                <!--Card Description-->
+                <div class="col s12 desc">
+                  هنرمندان سرشناس ایرانی چگونه پول لازم برای پروژه‌های هنری‌شان را تهیه می‌کردند؟ به‌ویژه زمانی که هنوز سرشناس نبودند؟
+                </div>
+                <div class="row divider"></div>
+                <!--Card Item Details-->
+                <div class="item-row">
+                  <div class="row ">
+                    <!--Card Item Progress Pie-->
+                    <div class="col s4">
+                      <div class="left pie">
+                        <input class="progKnob pie" value="55" data-label="55%" data-angleOffset='-125' data-angleArc='250'>
+                      </div>
+                    </div>
+                    <!--Card Item Pledge Amount-->
+                    <div class="col s8">
+                      <div class="row">
+                        پیش‌پرداخت‌ها:<span> 3,670,000 ریال </span>
+                      </div>
+                      <div class="row">
+                        <!--Card Item Bakers-->
+                        <div class="col s7 right center-align white-text light-blue lighten-1">
+                          <p>پشتیبان‌ها</p><span> 5 </span>
+                        </div>
+                        <!--Card Item Days Pie-->
+                        <div class="col s4 right pie">
+                          <input class="dayKnob pie" value="20" data-label="20 روز" data-angleOffset='-125' data-angleArc='250'>
+                        </div>
+                      </div>
+                    </div>             
+                  </div>
+                  <!--Card Item Location-->
+                  <div class="row light-blue darken-4 card-location white-text">
+                    <i class="material-icons tiny">room</i>ایران
+                  </div>
+                </div> 
+              </div>
+          </div>
+        </div>
+        <h5 class="center more-popular"><a href="#">پربازدیدهای بیشتر</a></h5>
+    </div>
+  </div>
+  <!-- All qolaks sectrion -->  
+  <div class="indigo lighten-5 all-qolaks-wrapper">
+    <div id="Container" class="container row right-align">
+    <h4>در میان 67 قلک ما بگردید</h4>
+        <!--Card Item-->
+        <div class="card-obj col s12 m6 l4 right mix featured-item recent-item" data-items-order="1">
+          <div class="card hoverable card-item">
+              <!--Item Image Container-->
+              <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
+              <!--Card Title-->
+              <div class="row item-detail white">  
+                <div class="col s12">
+                  <h5>
+                    <a href="http://poolpol.com/campaigns/100-artists-100-interviews/">۱۰1 هنرمند، ۱۰1 مصاحبه</a>
+                  </h5>
+                </div>
+                <!--Card Description-->
+                <div class="col s12 desc">
+                  هنرمندان سرشناس ایرانی چگونه پول لازم برای پروژه‌های هنری‌شان را تهیه می‌کردند؟ به‌ویژه زمانی که هنوز سرشناس نبودند؟
+                </div>
+                <div class="row divider"></div>
+                <!--Card Item Details-->
+                <div class="item-row">
+                  <div class="row ">
+                    <!--Card Item Progress Pie-->
+                    <div class="col s4">
+                      <div class="left pie">
+                        <input class="progKnob pie" value="55" data-label="55%" data-angleOffset='-125' data-angleArc='250'>
+                      </div>
+                    </div>
+                    <!--Card Item Pledge Amount-->
+                    <div class="col s8">
+                      <div class="row">
+                        پیش‌پرداخت‌ها:<span> 3,670,000 ریال </span>
+                      </div>
+                      <div class="row">
+                        <!--Card Item Bakers-->
+                        <div class="col s7 right center-align white-text light-blue lighten-1">
+                          <p>پشتیبان‌ها</p><span> 5 </span>
+                        </div>
+                        <!--Card Item Days Pie-->
+                        <div class="col s4 right pie">
+                          <input class="dayKnob pie" value="20" data-label="20 روز" data-angleOffset='-125' data-angleArc='250'>
+                        </div>
+                      </div>
+                    </div>             
+                  </div>
+                  <!--Card Item Location-->
+                  <div class="row light-blue darken-4 card-location white-text">
+                    <i class="material-icons tiny">room</i>ایران
+                  </div>
+                </div> 
+              </div>
+          </div>
+        </div>    
+        <!--Card Item-->
+        <div class="card-obj col s12 m6 l4 right mix featured-item" data-items-order="2">
+          <div class="card hoverable card-item">
+              <!--Item Image Container-->
+              <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
+              <!--Card Title-->
+              <div class="row item-detail white">  
+                <div class="col s12">
+                  <h5>
+                    <a href="http://poolpol.com/campaigns/100-artists-100-interviews/">۱۰2 هنرمند، ۱۰2 مصاحبه</a>
+                  </h5>
+                </div>
+                <!--Card Description-->
+                <div class="col s12 desc">
+                  هنرمندان سرشناس ایرانی چگونه پول لازم برای پروژه‌های هنری‌شان را تهیه می‌کردند؟ به‌ویژه زمانی که هنوز سرشناس نبودند؟
+                </div>
+                <div class="row divider"></div>
+                <!--Card Item Details-->
+                <div class="item-row">
+                  <div class="row ">
+                    <!--Card Item Progress Pie-->
+                    <div class="col s4">
+                      <div class="left pie">
+                        <input class="progKnob pie" value="55" data-label="55%" data-angleOffset='-125' data-angleArc='250'>
+                      </div>
+                    </div>
+                    <!--Card Item Pledge Amount-->
+                    <div class="col s8">
+                      <div class="row">
+                        پیش‌پرداخت‌ها:<span> 3,670,000 ریال </span>
+                      </div>
+                      <div class="row">
+                        <!--Card Item Bakers-->
+                        <div class="col s7 right center-align white-text light-blue lighten-1">
+                          <p>پشتیبان‌ها</p><span> 5 </span>
+                        </div>
+                        <!--Card Item Days Pie-->
+                        <div class="col s4 right pie">
+                          <input class="dayKnob pie" value="20" data-label="20 روز" data-angleOffset='-125' data-angleArc='250'>
+                        </div>
+                      </div>
+                    </div>             
+                  </div>
+                  <!--Card Item Location-->
+                  <div class="row light-blue darken-4 card-location white-text">
+                    <i class="material-icons tiny">room</i>ایران
+                  </div>
+                </div> 
+              </div>
+          </div>
+        </div>  
+        <!--Card Item-->
+        <div class="card-obj col s12 m6 l4 right mix recent-item" data-items-order="3">
+          <div class="card hoverable card-item">
+              <!--Item Image Container-->
+              <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
+              <!--Card Title-->
+              <div class="row item-detail white">  
+                <div class="col s12">
+                  <h5>
+                    <a href="http://poolpol.com/campaigns/100-artists-100-interviews/">۱۰3 هنرمند، ۱۰3 مصاحبه</a>
+                  </h5>
+                </div>
+                <!--Card Description-->
+                <div class="col s12 desc">
+                  هنرمندان سرشناس ایرانی چگونه پول لازم برای پروژه‌های هنری‌شان را تهیه می‌کردند؟ به‌ویژه زمانی که هنوز سرشناس نبودند؟
+                </div>
+                <div class="row divider"></div>
+                <!--Card Item Details-->
+                <div class="item-row">
+                  <div class="row ">
+                    <!--Card Item Progress Pie-->
+                    <div class="col s4">
+                      <div class="left pie">
+                        <input class="progKnob pie" value="55" data-label="55%" data-angleOffset='-125' data-angleArc='250'>
+                      </div>
+                    </div>
+                    <!--Card Item Pledge Amount-->
+                    <div class="col s8">
+                      <div class="row">
+                        پیش‌پرداخت‌ها:<span> 3,670,000 ریال </span>
+                      </div>
+                      <div class="row">
+                        <!--Card Item Bakers-->
+                        <div class="col s7 right center-align white-text light-blue lighten-1">
+                          <p>پشتیبان‌ها</p><span> 5 </span>
+                        </div>
+                        <!--Card Item Days Pie-->
+                        <div class="col s4 right pie">
+                          <input class="dayKnob pie" value="20" data-label="20 روز" data-angleOffset='-125' data-angleArc='250'>
+                        </div>
+                      </div>
+                    </div>             
+                  </div>
+                  <!--Card Item Location-->
+                  <div class="row light-blue darken-4 card-location white-text">
+                    <i class="material-icons tiny">room</i>ایران
+                  </div>
+                </div> 
+              </div>
+          </div>
+        </div>  
+        <!--Card Item-->
+        <div class="card-obj col s12 m6 l4 right mix featured-item recent-item" data-items-order="4">
+          <div class="card hoverable card-item">
+              <!--Item Image Container-->
+              <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
+              <!--Card Title-->
+              <div class="row item-detail white">  
+                <div class="col s12">
+                  <h5>
+                    <a href="http://poolpol.com/campaigns/100-artists-100-interviews/">۱۰4 هنرمند، ۱۰4 مصاحبه</a>
+                  </h5>
+                </div>
+                <!--Card Description-->
+                <div class="col s12 desc">
+                  هنرمندان سرشناس ایرانی چگونه پول لازم برای پروژه‌های هنری‌شان را تهیه می‌کردند؟ به‌ویژه زمانی که هنوز سرشناس نبودند؟
+                </div>
+                <div class="row divider"></div>
+                <!--Card Item Details-->
+                <div class="item-row">
+                  <div class="row ">
+                    <!--Card Item Progress Pie-->
+                    <div class="col s4">
+                      <div class="left pie">
+                        <input class="progKnob pie" value="55" data-label="55%" data-angleOffset='-125' data-angleArc='250'>
+                      </div>
+                    </div>
+                    <!--Card Item Pledge Amount-->
+                    <div class="col s8">
+                      <div class="row">
+                        پیش‌پرداخت‌ها:<span> 3,670,000 ریال </span>
+                      </div>
+                      <div class="row">
+                        <!--Card Item Bakers-->
+                        <div class="col s7 right center-align white-text light-blue lighten-1">
+                          <p>پشتیبان‌ها</p><span> 5 </span>
+                        </div>
+                        <!--Card Item Days Pie-->
+                        <div class="col s4 right pie">
+                          <input class="dayKnob pie" value="20" data-label="20 روز" data-angleOffset='-125' data-angleArc='250'>
+                        </div>
+                      </div>
+                    </div>             
+                  </div>
+                  <!--Card Item Location-->
+                  <div class="row light-blue darken-4 card-location white-text">
+                    <i class="material-icons tiny">room</i>ایران
+                  </div>
+                </div> 
+              </div>
+          </div>
+        </div>      
+    </div>
+  </div>
+  <!-- ******************************************************************** -->
+  <footer class="page-footer light-blue lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l8 s12 right">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div id="newsletter-pane" class="col l4 s12 news-latter light-blue darken-2 hoverable" data-intro="در خبرنامه ما عضو شوید تا آخرین اخبار راجع به قلک را برای شما ایمیل کنیم!" data-step="5" data-position="top">
+          <h5 class="white-text">در جریان باشید</h5>
+          <p class="grey-text text-lighten-4">ایمیل خود را در کادر زیر وارد کنید تا شما را در جریان اخبار روز قرار دهیم</p>
+          <div class="input-field col s12 white-text">
+            <input id="email" type="email" class="validate">
+            <label class="white-text" for="email">ایمیل</label>
+            <button class="btn btn-medium waves-effect waves-light light-blue darken-4 text-right" type="submit" name="action">عضویت
+              <i class="Large material-icons">send</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright light-blue">
+      <div class="container">
+        <a class="grey-text text-lighten-4 right" href="#!">لینک های دیگر</a>
+        <div class="cp left">تمامی حقوق این سایت، از جمله نشان قلک و نام تجاری قلک، محفوظ و متعلق به قلک است.
+        </div>
+      </div>
+    </div>
+  </footer>  
+
+</body>
+
+</html>

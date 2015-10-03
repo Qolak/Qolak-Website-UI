@@ -6,22 +6,9 @@ $(document).ready(function() {
 		$("input#search-field").val(this.value);
 	});
 
-	for (var i = 0; i < 3; i++)
-    	$(".card-obj").clone().appendTo(".items-row");
-    
-
-    $('.pie_progress').asPieProgress({
-        namespace: 'pie_progress'
-    });
-
-    $('.pie_day').asPieProgress({
-        namespace: 'pie_day',
-        label: function(n) {
-        var percentage = this.getPercentage(n);
-        return percentage;
-    }
-    });
- 
+	/*for (var i = 0; i < 3; i++)
+    	$(".card-obj").clone().appendTo(".items-row");*/
+ stickyHeaders.load($(".followMeBar"));
 var options = [
     {selector: '.pie_progress', offset: 150, callback: '$(".pie_progress").asPieProgress("go");'}
   ];
@@ -122,3 +109,67 @@ function isEmail(email) {
   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   return regex.test(email);
 }
+
+var stickyHeaders = (function() {
+
+  var $window = $(window),
+      $stickies;
+
+  var load = function(stickies) {
+
+    if (typeof stickies === "object" && stickies instanceof jQuery && stickies.length > 0) {
+
+      $stickies = stickies.each(function() {
+
+        var $thisSticky = $(this).wrap('<div class="followWrap" />');
+  
+        $thisSticky
+            .data('originalPosition', $thisSticky.offset().top)
+            .data('originalHeight', $thisSticky.outerHeight())
+              .parent()
+              .height($thisSticky.outerHeight()); 	  
+      });
+
+      $window.off("scroll.stickies").on("scroll.stickies", function() {
+		  _whenScrolling();		
+      });
+    }
+  };
+
+  var _whenScrolling = function() {
+
+    $stickies.each(function(i) {			
+
+      var $thisSticky = $(this),
+          $stickyPosition = $thisSticky.data('originalPosition');
+
+      if ($stickyPosition <= $window.scrollTop()) {        
+        
+        var $nextSticky = $stickies.eq(i + 1),
+            $nextStickyPosition = $nextSticky.data('originalPosition') - $thisSticky.data('originalHeight');
+
+        $thisSticky.addClass("fixed");
+
+        if ($nextSticky.length > 0 && $thisSticky.offset().top >= $nextStickyPosition) {
+
+          $thisSticky.addClass("absolute").css("top", $nextStickyPosition-20);
+        }
+
+      } else {
+        
+        var $prevSticky = $stickies.eq(i - 1);
+
+        $thisSticky.removeClass("fixed");
+
+        if ($prevSticky.length > 0 && $window.scrollTop() <= $thisSticky.data('originalPosition') - $thisSticky.data('originalHeight')) {
+
+          $prevSticky.removeClass("absolute").removeAttr("style");
+        }
+      }
+    });
+  };
+
+  return {
+    load: load
+  };
+})();

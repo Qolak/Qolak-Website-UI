@@ -1,0 +1,53 @@
+/* Sort By wrapper css*/
+.sort-by span {
+	left:0 !important;
+	right: auto !important;
+}
+
+.sort-by ul.dropdown-content li {
+	text-align: right !important;
+}
+
+.sort-by input.select-dropdown {
+    font-size: 2rem;
+    padding-right: 0.5rem;
+}
+
+.sort-by .select-wrapper {
+	position: relative;
+	top:0.5rem;
+}
+/* Search section  css*/
+.camp-search i {
+    position: relative;
+    top: 10px;
+}
+
+.camp-search .input-field input[type=search]:focus + label i {
+    color: #9E9E9E !important;
+}
+/* Featured wrapper css*/
+.featured {
+	padding-bottom: 20px;	
+	margin-top: -55px;
+}
+
+.featured .card {
+	top: 1rem ;
+}
+/* all-qolaks-wrapper wrapper css*/
+.all-qolaks-wrapper {
+	padding-top: 25px;
+}
+
+#Container .mix{
+    display: none;
+}
+.indigo {
+	margin-top: -5%;
+	padding-top: 25px;
+}
+
+footer.page-footer {
+	margin-top: -20px !important;
+}

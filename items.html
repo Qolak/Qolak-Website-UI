@@ -19,85 +19,67 @@
   <script src="js/materialize.min.js"></script>
   <!--Scripts for initializing some objects for materializecss-->
   <script src="js/qolak.js"></script>
-  <script type="text/javascript" src="js/jquery-asPieProgress.js"></script>
-  <script type="text/javascript">
-    jQuery(document).ready(function($){
-      for (var i = 0; i < 3; i++)
-        $(".card-obj").clone().appendTo(".items-row");
-      
-      $('.pie_progress').asPieProgress({
-        namespace: 'pie_progress'
-      });
-      $('.pie_progress').asPieProgress('go','60%');
-
-      $('.pie_day').asPieProgress({
-        namespace: 'pie_day'
-      });
-      $('.pie_day').asPieProgress('go',30);
-
-
-    });
-  </script>
+  <!--Card-item CSS Import-->
+  <link rel="stylesheet" href="css/card-item.css">
+  <!--Card-item JavaScript Import-->
+  <script src="js/jquery.knob.js"></script>
+  <script src="js/card-item.js"></script>
 </head>
 
 <body>
-  <div class="row items-row">
+	<div class="row items-row">
+
     <!--Card Item-->
-    <div class="card-obj col l3 m6 s12 right">
-      <div class="card hoverable card-item">
-        <!--Item Image Container-->
-        <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
-       
-        <!--Card Title-->
-        <div class="row item-detail white">  
-          <div class="col s12">
-            <h5>
-              <a href="http://poolpol.com/campaigns/100-artists-100-interviews/">۱۰۰ هنرمند، ۱۰۰ مصاحبه</a>
-            </h5>
-          </div>
- 
-          <!--Card Description-->
-          <div class="col s12 desc">
-            هنرمندان سرشناس ایرانی چگونه پول لازم برای پروژه‌های هنری‌شان را تهیه می‌کردند؟ به‌ویژه زمانی که هنوز سرشناس نبودند؟
-          </div>
-        
-          <div class="row divider"></div>
-          <!--Card Item Details-->
-          <div class="item-row">
-            <div class="row ">
-              <!--Card Item Progress Pie-->
-              <div class="col s4">
-                <div class="pie_progress left" role="progressbar"  data-barcolor="#29b6f6" data-barsize="10">
-                  <div class="pie_progress__number">0%</div>
-                </div>
-              </div>
-              <!--Card Item Pledge Amount-->
-              <div class="col s8">
-                <div class="row">
-                  پیش‌پرداخت‌ها:<span> 3,670,000 ریال </span>
-                </div>
-                <div class="row">
-                  <!--Card Item Bakers-->
-                  <div class="col s7 right center-align white-text light-blue lighten-1">
-                    <p>پشتیبان‌ها</p><span> 5 </span>
-                  </div>
-                  <!--Card Item Days Pie-->
-                  <div class="col s4 right">
-                    <div class="pie_day" role="progressbar" data-goal="33"  data-barcolor="#01579b" data-barsize="7">
-                      <div class="pie_day__number"> 3 روز </div>
-                    </div>
-                  </div>
-                </div>
-              </div>             
-            </div>
-            <!--Card Item Location-->
-            <div class="row light-blue darken-4 card-location white-text">
-              <i class="material-icons tiny">room</i>ایران
-            </div>
-          </div> 
-        </div>
-      </div>
-    </div>
-  </div>
+    <div class="card-obj col l4 m6 s12 right">
+    	<div class="card hoverable card-item">
+	        <!--Item Image Container-->
+	        <div class="row item-img large card-image waves-effect waves-block waves-light" style="background-image: url('img/office.jpg');"></div>
+	        <!--Card Title-->
+	        <div class="row item-detail white">  
+	          <div class="col s12">
+	            <h5>
+	              <a href="http://poolpol.com/campaigns/100-artists-100-interviews/">۱۰۰ هنرمند، ۱۰۰ مصاحبه</a>
+	            </h5>
+	          </div>
+	          <!--Card Description-->
+	          <div class="col s12 desc">
+	            هنرمندان سرشناس ایرانی چگونه پول لازم برای پروژه‌های هنری‌شان را تهیه می‌کردند؟ به‌ویژه زمانی که هنوز سرشناس نبودند؟
+	          </div>
+	          <div class="row divider"></div>
+	          <!--Card Item Details-->
+	          <div class="item-row">
+	            <div class="row ">
+	              <!--Card Item Progress Pie-->
+	              <div class="col s4">
+	                <div class="left pie">
+	                	<input class="progKnob pie" value="55" data-label="55%" data-angleOffset='-125' data-angleArc='250'>
+	                </div>
+	              </div>
+	              <!--Card Item Pledge Amount-->
+	              <div class="col s8">
+	                <div class="row">
+	                	پیش‌پرداخت‌ها:<span> 3,670,000 ریال </span>
+	                </div>
+	                <div class="row">
+	                  <!--Card Item Bakers-->
+	                  <div class="col s7 right center-align white-text light-blue lighten-1">
+	                    <p>پشتیبان‌ها</p><span> 5 </span>
+	                  </div>
+	                  <!--Card Item Days Pie-->
+	                  <div class="col s4 right pie">
+	                    <input class="dayKnob pie" value="20" data-label="20 روز" data-angleOffset='-125' data-angleArc='250'>
+	                  </div>
+	                </div>
+	              </div>             
+	            </div>
+	            <!--Card Item Location-->
+	            <div class="row light-blue darken-4 card-location white-text">
+	              <i class="material-icons tiny">room</i>ایران
+	            </div>
+	          </div> 
+	        </div>
+  		</div>
+	</div>
+</div>
 </body>
 </html>
