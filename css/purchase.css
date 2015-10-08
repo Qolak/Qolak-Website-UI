@@ -58,3 +58,32 @@ ul.progress-nav li.done:last-child:after {
 ul.progress-nav li.done:last-child {
 	background: #29b6f6;	
 }
+/******************************************************************/
+.cart-obj tr td:first-child {
+	width: 50%;
+	line-height: 100%;
+}
+
+.cart-obj tr td:first-child img{
+	width: 120px;
+}
+
+.cart-obj tr td:first-child span{
+	margin-top: 2.2rem;
+    margin-right: 1rem;
+    float: right;
+}
+
+.cart-obj tr td:nth-child(2) {
+	width: 35%;
+}
+
+.cart-obj tr td:last-child {
+	width: 15%;
+}
+
+@media only screen and (max-width: 992px){
+	table.responsive-table img {
+	    display: none;
+	}
+}
