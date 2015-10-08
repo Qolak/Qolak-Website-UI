@@ -1,0 +1,60 @@
+ul.progress-nav {
+    margin: 20px 60px;
+}
+
+ul.progress-nav li {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 29%;
+    margin: 5px 5px 0 0;
+    padding-right: 2%;
+    position: relative;
+    float:none;
+    background: #ccc;
+}
+
+ul.progress-nav li:first-child:before {
+    border-color: transparent;
+}
+
+ul.progress-nav li:before {
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -2px;
+    border-style: solid;
+    border-width: 20px 20px 20px 0px;
+    border-color: transparent #fff transparent transparent ;
+    z-index: 0;
+}
+
+ul.progress-nav li:after {
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    top:0;
+    left: -20px;
+    border-style: solid;
+    border-width: 20px 20px 20px 0px;
+    border-color: transparent #ccc transparent transparent ;
+    z-index: 10;
+}
+
+ul.progress-nav li.done:after {
+	border-color: transparent #009688 transparent transparent ;
+}
+
+ul.progress-nav li.done {
+	background: #009688;	
+}
+
+ul.progress-nav li.done:last-child:after {
+	border-color: transparent #29b6f6 transparent transparent ;
+}
+
+ul.progress-nav li.done:last-child {
+	background: #29b6f6;	
+}
