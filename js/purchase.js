@@ -5,7 +5,7 @@ $(document).ready(function() {
         $('.steps ' + targetTab).show().siblings().hide();
  
         // Change/remove current tab to active
-        $(".progress-nav " + targetTab +'-li').removeClass('done').prev().addClass('done').next().removeClass('done');
+        $(".progress-nav " + targetTab +'-li').removeClass('done').prev().addClass('done').next().next().removeClass('done');
         e.preventDefault();
     });
     $('.checkout-btn').click(function(){
