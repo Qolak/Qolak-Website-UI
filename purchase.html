@@ -127,9 +127,9 @@
 <div class="container followMeBar white">
 	<div class="row white-text">
 		<ul class="progress-nav col s12 m8 offset-m2 center">
-		    <li class="">سبد</li>
-		    <li class="done">مشخصات</li>
-		    <li class="done">پرداخت</li>
+		    <li id="cart-li" class="">سبد</li>
+		    <li id="baker-li" class="">مشخصات</li>
+		    <li id="checkout-li" class="">پرداخت</li>
 		</ul>
 	</div>
 	<div class="divider"></div>
@@ -187,8 +187,22 @@
 	    	<a class="waves-effect waves-light btn-large move-step" href="#baker"><i class="material-icons left">check</i>تایید و ادامه به مرحله بعد</a>
 	    </div> 
 	</div>
-	<div id="baker" class="tab">baker section</div>
-	<div id="checkout" class="tab">checkout</div>
+	<div id="baker" class="tab">
+		baker section
+	    <div class="divider row"></div>
+	    <div class="container center">
+	    	<a class="waves-effect waves-light btn-large move-step" href="#cart"><i class="material-icons left">check</i>بازگشت به مرحله قبل</a>
+	    	<a class="waves-effect waves-light btn-large move-step" href="#checkout"><i class="material-icons left">check</i>تایید و ادامه به مرحله بعد</a>
+	    </div> 	
+	</div>
+	<div id="checkout" class="tab">
+		checkout
+	    <div class="divider row"></div>
+	    <div class="container center">
+	    	<a class="waves-effect waves-light btn-large move-step" href="#baker"><i class="material-icons left">check</i>بازگشت به مرحله قبل</a>
+	    	<a class="waves-effect waves-light btn-large checkout-btn"><i class="material-icons left">check</i>پرداخت</a>
+	    </div>
+	</div>
 </div>
 
 <!-- ******************************************************************** -->

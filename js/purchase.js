@@ -1,13 +1,15 @@
-jQuery(document).ready(function() {
-    jQuery('.move-step').on('click', function(e)  {
-        var currentAttrValue = jQuery(this).attr('href');
- 
+$(document).ready(function() {
+    $('.move-step').on('click', function(e)  {
+        var targetTab = $(this).attr('href');
         // Show/Hide Tabs
-        jQuery('.steps ' + currentAttrValue).show().siblings().hide();
+        $('.steps ' + targetTab).show().siblings().hide();
  
         // Change/remove current tab to active
-        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
- 
+        $(".progress-nav " + targetTab +'-li').removeClass('done').prev().addClass('done').next().removeClass('done');
         e.preventDefault();
     });
+    $('.checkout-btn').click(function(){
+    	$('#checkout-li').addClass('done');
+    });
+
 });
