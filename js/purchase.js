@@ -7,6 +7,7 @@ $(document).ready(function() {
         // Change/remove current tab to active
         $(".progress-nav " + targetTab +'-li').removeClass('done').prev().addClass('done').next().next().removeClass('done');
         e.preventDefault();
+        $.scrollTo($(targetTab).offset().top-160, 800);
     });
     $('.checkout-btn').click(function(){
     	$('#checkout-li').addClass('done');
