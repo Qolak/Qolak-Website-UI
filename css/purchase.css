@@ -96,5 +96,14 @@ ul.progress-nav li.done:last-child {
 	}
 }
 
+/**********************************************************/
+.address.input-field i.prefix {
+    right: -15px;
+}
+.address.input-field .prefix ~ label , .address.input-field .prefix ~ textarea {
+    margin-right: 3rem;
+    right: 0.75rem;
+}
+
 
 
