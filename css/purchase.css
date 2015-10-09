@@ -1,3 +1,4 @@
+/* Progress nav */
 ul.progress-nav {
     margin: 20px 60px;
 }
@@ -58,6 +59,13 @@ ul.progress-nav li.done:last-child:after {
 ul.progress-nav li.done:last-child {
 	background: #29b6f6;	
 }
+/******************************************/
+.tab {
+    display:none;
+}
+.tab.active {
+    display:block;
+}
 /******************************************************************/
 .cart-obj tr td:first-child {
 	width: 50%;
@@ -87,3 +95,6 @@ ul.progress-nav li.done:last-child {
 	    display: none;
 	}
 }
+
+
+
