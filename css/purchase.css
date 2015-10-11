@@ -96,14 +96,17 @@ ul.progress-nav li.done:last-child {
 	}
 }
 
-/**********************************************************/
-.address.input-field i.prefix {
+/************************baker Section   ********************/
+#baker .input-field i.prefix {
     right: -15px;
 }
-.address.input-field .prefix ~ label , .address.input-field .prefix ~ textarea {
+
+#baker .input-field label ,#baker  .input-field input[type="text"]  {
+    right: 1rem;
+    left: auto;
+}
+
+#baker .input-field .prefix ~ label ,#baker  .input-field .prefix ~ textarea , #baker  .input-field .prefix ~ input[type="text"] {
     margin-right: 3rem;
     right: 0.75rem;
 }
-
-
-
