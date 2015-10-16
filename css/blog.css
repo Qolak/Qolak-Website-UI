@@ -14,6 +14,14 @@
 	}
 }
 
+.short-post .post-detail a {
+	color:black;
+}
+
+.short-post .post-detail a:hover ,.posts-category .secondary-content:hover {
+	color: #039be5 !important;
+}
+
 .blog-sticky-header.fixed{
 	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
 }
