@@ -1,0 +1,7 @@
+/*********************** All Posts Css **************************************/
+.short-post {
+	padding-top: 15px !important;
+}
+.short-post .divider {
+	margin-bottom: 15px;
+}
