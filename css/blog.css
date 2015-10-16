@@ -8,6 +8,12 @@
 	margin-bottom: 15px;
 }
 
+@media only screen and (min-width: 993px){
+	.main-container {
+	    width: 85% !important;
+	}
+}
+
 .blog-sticky-header.fixed{
 	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
 }
@@ -31,8 +37,12 @@
 	width: 20% !important;
 }
 
-@media only screen and (min-width: 993px){
-	.main-container {
-	    width: 85% !important;
-	}
+.posts-category .collection {
+    border: none;
+}
+
+.posts-category .collection li i { 
+    position: relative;
+    top: -4px;
+    margin-left: 5px !important;
 }
