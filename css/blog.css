@@ -15,3 +15,12 @@
 .indigo.lighten-5 {
 	margin-bottom: -20px;
 }
+
+.pagination li i {
+	position: relative;
+	top: 4px;
+}
+
+.pagination li.active {
+    background-color: #29b6f6 !important;
+}
