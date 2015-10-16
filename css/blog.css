@@ -1,7 +1,7 @@
 /*********************** All Posts Css **************************************/
 .short-post {
 	padding-top: 15px !important;
-	margin-top: 25px !important;
+	
 }
 
 .short-post .divider {
@@ -13,6 +13,8 @@
 }
 
 .indigo.lighten-5 {
+	padding-top: 15px;
+	margin-top: -70px;
 	margin-bottom: -20px;
 }
 
@@ -23,4 +25,15 @@
 
 .pagination li.active {
     background-color: #29b6f6 !important;
+}
+
+.posts-category.pinned {
+	top: 140px !important;
+	width: 20% !important;
+}
+
+@media only screen and (min-width: 993px){
+	.main-container {
+	    width: 85% !important;
+	}
 }
