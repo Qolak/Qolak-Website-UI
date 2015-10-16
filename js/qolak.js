@@ -152,7 +152,7 @@ var stickyHeaders = (function() {
 
         if ($nextSticky.length > 0 && $thisSticky.offset().top >= $nextStickyPosition) {
 
-          $thisSticky.addClass("absolute").css("top", $nextStickyPosition-20);
+          $thisSticky.addClass("absolute").css("top", $nextStickyPosition-40);
         }
 
       } else {
