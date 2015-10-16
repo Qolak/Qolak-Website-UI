@@ -67,3 +67,11 @@ body div ul#user-dropdown li {
 .followMeBar.fixed.absolute {
   position: absolute;
 }
+
+.v-divider {
+    width: 3px;
+    height: 80%;
+    margin-top: 10%;
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
