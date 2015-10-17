@@ -54,3 +54,10 @@
     top: -4px;
     margin-left: 5px !important;
 }
+
+/***************************** Single Blog Post******************************/
+a.share-btn {
+	position: fixed;
+	bottom: 5%;
+	left: 5%;
+}
