@@ -14,11 +14,11 @@
 	}
 }
 
-.short-post .post-detail a {
+.short-post .posts-detail a {
 	color:black;
 }
 
-.short-post .post-detail a:hover ,.posts-category .secondary-content:hover {
+.short-post .posts-detail a:hover ,.posts-category .secondary-content:hover {
 	color: #039be5 !important;
 }
 
