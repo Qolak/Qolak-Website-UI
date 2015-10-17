@@ -56,10 +56,14 @@
 }
 
 /***************************** Single Blog Post******************************/
-a.share-btn {
+.share-btn {
 	position: fixed;
-	bottom: 5%;
-	left: 5%;
+	bottom: 45px; 
+	right: 24px;
+}
+
+.share-btn li a{
+	background-color: rgba(0,0,0,0);
 }
 
 .post-container .post-content {
