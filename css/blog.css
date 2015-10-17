@@ -61,3 +61,7 @@ a.share-btn {
 	bottom: 5%;
 	left: 5%;
 }
+
+.post-container .post-content {
+	text-align: justify;
+}
