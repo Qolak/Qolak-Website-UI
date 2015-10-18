@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <!--CSS Import-->
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/qolak.header.css">
+  <link rel="stylesheet" href="css/qolak.body.css">
+  <link rel="stylesheet" href="css/qolak.footer.css">
+  <!--IntroJS CSS Import-->
+  <link rel="stylesheet" href="css/introjs.min.css">
+  <link rel="stylesheet" href="css/introjs-rtl.min.css">
+  <link rel="stylesheet" href="img/intro-themes/introjs-nassim.css">
+
+  <!--JavaScript Import-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+
+  <script src="js/jquery.scrollTo.min.js"></script>
+
+  <!--IntroJS JavaScript Import-->
+  <script src="js/intro.min.js"></script>
+  <!--Scripts for initializing some objects for materializecss-->
+  <script src="js/qolak.js"></script>
+  <!--Blog CSS Import-->
+  <link rel="stylesheet" href="css/blog.css">
+  <!--Blog JavaScript Import-->
+  <script src="js/blog.js"></script>
+</head>
+
+<body>
+  <div id="introDiv" data-intro="به قلک خوش آمدید!" data-step="1" data-position="bottom"></div>
+  <div class="followMeBar" data-intro="برای شروع، میتوانید یک قلک بسازید تا مردم از شما حمایت مالی کنند! همچنین میتوانید در سایت جستجو کنید یا به مجله های ما که حاوی آخرین اخبار مربوط به قلک است، سری بزنید!" data-step="2" data-position="bottom">
+
+  <!--User Dropdown Initialization-->
+
+    <ul id="user-dropdown" class="dropdown-content">
+      <li><a href="http://qolak.com/user/profile">حساب کاربری</a></li>
+      <li><a href="http://qolak.com/user/settings">تنظیمات</a></li>
+      <li><a href="http://qolak.com/user/qolak">قلک من</a></li>
+      <li class="divider"></li>
+      <li><a href="http://qolak.com/logout">خروج</a></li>
+    </ul>
+
+    <!--Top Navigation Bar-->
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="container">
+
+        <!--Logo Container-->
+        <ul id="logo-container" class="right">
+          <li>
+            <a href="http://qolak.com" class="brand-logo right">قلک</a>
+          </li>
+        </ul>
+
+        <!--User Dropdown Container-->
+        <ul id="dropdown-container" class="right">
+          <li>
+            <a href="" class="dropdown-button" data-activates="user-dropdown" data-beloworigin="true"><i id="arrow" class="material-icons small">arrow_drop_down</i>آقای محمدی</a>
+          </li>
+        </ul>
+
+        <!--Search-Field for Large Screen-->
+        <input id="search-field" type="hidden" value="mehrdad">
+        <ul id="searchbar" class="right hide-on-med-and-down">
+          <li>
+            <form>
+              <div class="input-field">
+                <input id="search" type="search" required class="search-field">
+                <label for="search"><i class="material-icons">search</i></label>
+              </div>
+            </form>
+          </li>
+        </ul>
+
+        <!--Sidebar Menu Button-->
+        <a id="menu-button" href="" data-activates="nav-mobile" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+
+        <!--Top Links Container-->
+        <ul id="top-button-container" class="hide-on-med-and-down left">
+          <li>
+            <a id="introButton" href="#" onclick="startIntro();"><i class="material-icons left">live_help</i>راهنمایی</a>
+          </li>
+          <li>
+            <a href="http://qolak.com/blog"><i class="material-icons left">description</i>مجله</a>
+          </li>
+          <li class="active">
+            <a href="http://qolak.com/create"><i class="material-icons left">queue</i>ساخت قلک</a>
+          </li>
+        </ul>
+
+        <!--Sidebar Items-->
+        <ul id="nav-mobile" class="side-nav">
+          <li id="sidebar-title" class="light-blue darken-1">
+            <h4 style="border-bottom: 2px; padding-bottom:5px;">منو</h4>
+          </li>
+
+          <li id="search-li" class="center hide-on-large-only">
+            <form id="search">
+              <div class="input-field">
+                <input placeholder="جستجو" id="sidebar-search" type="text" class="search-field">
+                <label for="sidebar-search"><i class="material-icons">search</i></label>
+              </div>
+            </form>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#" onclick="startIntro();">راهنمایی</a>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#">ساخت قلک</a>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#">مجله</a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+  </div>
+<!-- ******************************************************************** -->
+<div class="white blog-sticky-header" >
+	<div class="container center">
+		<h1>مجله قلک</h1>
+	</div>	
+	<div class="divider"></div>
+	<div class="divider"></div>
+	<div class="divider"></div>
+	<div class="divider"></div>
+</div>
+<div class="indigo lighten-5">
+	<div class="container row main-container">
+
+    <div class="fixed-action-btn share-btn">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">share</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating"><img src="img/share_fb.png"></a></li>
+        <li><a class="btn-floating"><img src="img/share_tw.png"></a></li>
+        <li><a class="btn-floating"><img src="img/share_g.png"></a></li>
+        <li><a class="btn-floating"><img src="img/share_li.png"></a></li>
+      </ul>
+    </div>
+
+
+    
+		<div class="post-container">
+			<div class="container card col s12 m10 offset-m1 hoverable row">
+        <h2 class="col s12">مصاحبه‌ی پایه‌گذار سایت پول پل درباره‌ی خیل مایه گذاری در شبکه‌ی ۴ سیما</h2>
+        <div class="col s12 row post-detail indigo lighten-5">  
+          <a href="" class="right">
+            <h6 >مهرداد محمدی</h6>
+          </a>
+          <h6 class="grey-text right">13 خرداد 1372</h6>
+
+          <div class="left col">
+            <a href=""><img src="img/share_fb.png"></a>
+            <a href=""><img src="img/share_tw.png"></a>
+            <a href=""><img src="img/share_g.png"></a>
+            <a href=""><img src="img/share_li.png"></a>
+          </div>
+
+        
+        </div>
+				
+        <img class="col s12 s12 m10 offset-m1 responsive-img" src="img/blog-post1.jpg">
+				
+				<section class="col s12 m10 offset-m1 post-content row" itemprop="articleBody">
+                  <p>در حال انجام کارهای مقدماتی برای آغاز برنامه&zwnj;های مصاحبه&zwnj;محور رادیو پول پل هستیم. مخاطب ما در این برنامه هنردوستان و هنرمندانی هستند که دوست دارند درباره&zwnj;ی فرآیند تولید کارهای هنری به&zwnj;ویژه از جنبه&zwnj;ی تامین مالی آن&zwnj;ها و جذب سرمایه در مراحل آغازین آشنا شوند.</p>
+<p>تلاش خواهیم کرد تا به سراغ چهره&zwnj;های سرشناس، کارآزموده، و مستقل در حوزه&zwnj;های هنری گوناگون برویم و در مصاحبه&zwnj;ای تفصیلی کارنامه&zwnj;ی آن&zwnj;ها را این بار از زاویه&zwnj;ای جدید بنگریم. با هم به شنیدن داستان آن&zwnj;ها خواهیم نشست تا ببینیم ایده&zwnj;ی هر کدام از پروژه&zwnj;های هنر&zwnj;ی&zwnj;شان از کجا آمد، چگونه برای آن ایده&zwnj;ها سرمایه جذب کردند، تیم خود را چگونه تشکیل دادند و…، و در هر کدام از این موارد با چه مشکلاتی روبه&zwnj;رو شدند و چگونه آن&zwnj;ها را از میان برداشتند. در کل، این مصاحبه&zwnj;ها مروری بر کارنامه&zwnj;ی هنری هر کدام از این چهره&zwnj;ها خواهد بود که از زاویه&zwnj;ی سرمایه&zwnj;ی انسانی، سرمایه&zwnj;ی اجتماعی، و سرمایه&zwnj;ی مالی تلاش خواهد کرد تا ناشنیده&zwnj;هایی را به گوش ما برساند.</p>
+<p>با ما همراه باشید و دیدگاه&zwnj;ی&zwnj;تان را درباره&zwnj;ی فرم و محتوای برنامه از طریق بخشش دیدگاه&zwnj;ها به گوش ما برسانید.</p>
+                </section>
+
+
+        <div class="divider row col s12"></div>
+        <div class="col row">
+          <a href="">
+            <div class="chip light-blue lighten-1">
+                مجله
+                <i class="material-icons">label</i>
+            </div>
+          </a>
+          <a href="">
+            <div class="chip light-blue lighten-1">
+                خیریه
+                <i class="material-icons">label</i>
+            </div>
+          </a>
+          <a href="">
+            <div class="chip light-blue lighten-1">
+                قلک
+                <i class="material-icons">label</i>
+            </div>
+          </a>
+        </div>
+ 
+
+
+			</div>
+
+      <div class="card col s12 hoverable comments-section ">
+        <div class="col s12 row">
+          comments
+        </div>
+      </div>
+			
+		</div>
+
+
+	</div>
+</div>
+<!-- ******************************************************************** -->
+  <footer class="page-footer light-blue lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l8 s12 right">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div id="newsletter-pane" class="col l4 s12 news-latter light-blue darken-2 hoverable" data-intro="در خبرنامه ما عضو شوید تا آخرین اخبار راجع به قلک را برای شما ایمیل کنیم!" data-step="5" data-position="top">
+          <h5 class="white-text">در جریان باشید</h5>
+          <p class="grey-text text-lighten-4">ایمیل خود را در کادر زیر وارد کنید تا شما را در جریان اخبار روز قرار دهیم</p>
+          <div class="input-field col s12 white-text">
+            <input id="email" type="email" class="validate">
+            <label class="white-text" for="email">ایمیل</label>
+            <button class="btn btn-medium waves-effect waves-light light-blue darken-4 text-right" type="submit" name="action">عضویت
+              <i class="Large material-icons">send</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright light-blue">
+      <div class="container">
+        <a class="grey-text text-lighten-4 right" href="#!">لینک های دیگر</a>
+        <div class="cp left">تمامی حقوق این سایت، از جمله نشان قلک و نام تجاری قلک، محفوظ و متعلق به قلک است.
+        </div>
+      </div>
+    </div>
+  </footer>  
+
+</body>
+
+</html>

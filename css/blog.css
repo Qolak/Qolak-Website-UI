@@ -1,0 +1,71 @@
+/*********************** All Posts Css **************************************/
+.short-post {
+	padding: 15px 0 !important;
+	
+}
+
+.short-post .divider {
+	margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 993px){
+	.main-container {
+	    width: 85% !important;
+	}
+}
+
+.short-post .posts-detail a {
+	color:black;
+}
+
+.short-post .posts-detail a:hover ,.posts-category .secondary-content:hover {
+	color: #039be5 !important;
+}
+
+.blog-sticky-header.fixed{
+	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+}
+
+.indigo.lighten-5 {
+	padding:15px 15px;
+	/*margin-bottom: -20px;*/
+}
+
+.pagination li i {
+	position: relative;
+	top: 4px;
+}
+
+.pagination li.active {
+    background-color: #29b6f6 !important;
+}
+
+.posts-category.pinned {
+	top: 140px !important;
+	width: 20% !important;
+}
+
+.posts-category .collection {
+    border: none;
+}
+
+.posts-category .collection li i { 
+    position: relative;
+    top: -4px;
+    margin-left: 5px !important;
+}
+
+/***************************** Single Blog Post******************************/
+.share-btn {
+	position: fixed;
+	bottom: 45px; 
+	right: 24px;
+}
+
+.share-btn li a{
+	background-color: rgba(0,0,0,0);
+}
+
+.post-container .post-content {
+	text-align: justify;
+}
