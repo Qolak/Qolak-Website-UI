@@ -1,0 +1,15 @@
+.faq-cat.pinned {
+	top: 50px !important;
+}
+
+.table-of-contents a.active {
+   border-right: 2px solid #ea4a4f !important;
+   padding-right: 18px !important;
+   border-left: none !important;
+   padding-left: 0 !important;
+}
+
+.table-of-contents a {
+   padding-right: 18px !important;
+   padding-left: 0 !important;
+}
