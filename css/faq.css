@@ -3,13 +3,21 @@
 }
 
 .table-of-contents a.active {
-   border-right: 2px solid #ea4a4f !important;
+   border-right: 5px solid #25A4DE !important;
    padding-right: 18px !important;
    border-left: none !important;
    padding-left: 0 !important;
 }
 
 .table-of-contents a {
+	margin-top: 10px;
    padding-right: 18px !important;
    padding-left: 0 !important;
+   font-size: 1.3rem;
+}
+
+.table-of-contents a:hover {
+    padding-right: 19px;
+    border-right: 3px solid #25A4DE;
+    border-left:none !important;
 }
