@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <!--CSS Import-->
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/qolak.header.css">
+  <link rel="stylesheet" href="css/qolak.body.css">
+  <link rel="stylesheet" href="css/qolak.footer.css">
+  <!--IntroJS CSS Import-->
+  <link rel="stylesheet" href="css/introjs.min.css">
+  <link rel="stylesheet" href="css/introjs-rtl.min.css">
+  <link rel="stylesheet" href="img/intro-themes/introjs-nassim.css">
+
+  <!--JavaScript Import-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+
+  <script src="js/jquery.scrollTo.min.js"></script>
+
+  <!--IntroJS JavaScript Import-->
+  <script src="js/intro.min.js"></script>
+  <!--Scripts for initializing some objects for materializecss-->
+  <script src="js/qolak.js"></script>
+  <!--FAQ CSS Import-->
+  <link rel="stylesheet" href="css/faq.css">
+  <!--FAQ JavaScript Import-->
+  <script src="js/faq.js"></script>
+</head>
+
+<body>
+  <div id="introDiv" data-intro="به قلک خوش آمدید!" data-step="1" data-position="bottom"></div>
+  <div class="followMeBar" data-intro="برای شروع، میتوانید یک قلک بسازید تا مردم از شما حمایت مالی کنند! همچنین میتوانید در سایت جستجو کنید یا به مجله های ما که حاوی آخرین اخبار مربوط به قلک است، سری بزنید!" data-step="2" data-position="bottom">
+
+  <!--User Dropdown Initialization-->
+
+    <ul id="user-dropdown" class="dropdown-content">
+      <li><a href="http://qolak.com/user/profile">حساب کاربری</a></li>
+      <li><a href="http://qolak.com/user/settings">تنظیمات</a></li>
+      <li><a href="http://qolak.com/user/qolak">قلک من</a></li>
+      <li class="divider"></li>
+      <li><a href="http://qolak.com/logout">خروج</a></li>
+    </ul>
+
+    <!--Top Navigation Bar-->
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="container">
+
+        <!--Logo Container-->
+        <ul id="logo-container" class="right">
+          <li>
+            <a href="http://qolak.com" class="brand-logo right">قلک</a>
+          </li>
+        </ul>
+
+        <!--User Dropdown Container-->
+        <ul id="dropdown-container" class="right">
+          <li>
+            <a href="" class="dropdown-button" data-activates="user-dropdown" data-beloworigin="true"><i id="arrow" class="material-icons small">arrow_drop_down</i>آقای محمدی</a>
+          </li>
+        </ul>
+
+        <!--Search-Field for Large Screen-->
+        <input id="search-field" type="hidden" value="mehrdad">
+        <ul id="searchbar" class="right hide-on-med-and-down">
+          <li>
+            <form>
+              <div class="input-field">
+                <input id="search" type="search" required class="search-field">
+                <label for="search"><i class="material-icons">search</i></label>
+              </div>
+            </form>
+          </li>
+        </ul>
+
+        <!--Sidebar Menu Button-->
+        <a id="menu-button" href="" data-activates="nav-mobile" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+
+        <!--Top Links Container-->
+        <ul id="top-button-container" class="hide-on-med-and-down left">
+          <li>
+            <a id="introButton" href="#" onclick="startIntro();"><i class="material-icons left">live_help</i>راهنمایی</a>
+          </li>
+          <li>
+            <a href="http://qolak.com/blog"><i class="material-icons left">description</i>مجله</a>
+          </li>
+          <li class="active">
+            <a href="http://qolak.com/create"><i class="material-icons left">queue</i>ساخت قلک</a>
+          </li>
+        </ul>
+
+        <!--Sidebar Items-->
+        <ul id="nav-mobile" class="side-nav">
+          <li id="sidebar-title" class="light-blue darken-1">
+            <h4 style="border-bottom: 2px; padding-bottom:5px;">منو</h4>
+          </li>
+
+          <li id="search-li" class="center hide-on-large-only">
+            <form id="search">
+              <div class="input-field">
+                <input placeholder="جستجو" id="sidebar-search" type="text" class="search-field">
+                <label for="sidebar-search"><i class="material-icons">search</i></label>
+              </div>
+            </form>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#" onclick="startIntro();">راهنمایی</a>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#">ساخت قلک</a>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#">مجله</a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+  </div>
+<!-- ******************************************************************** -->
+<div class=" indigo lighten-5">
+<div class="container row">
+    <div class="col hide-on-small-only m3 l2 left main">
+      <h6>
+      <ul class="section faq-cat table-of-contents">
+        <li><a href="#introduction">سوالات کلی</a></li>
+        <li><a href="#create_qolak">راهنمایی درباره ساخت قلک</a></li>
+        <li><a href="#back_qolak">راهنمایی درباره کمک به قلک</a></li>
+        <li><a href="#issues">مشکلات احتمالی</a></li>
+      </ul>
+      </h6>
+    </div>
+    <div class="col s12 m9 l10 right white">
+      <div id="introduction" class="section scrollspy">
+        <p><strong>پایه&zwnj;های پول&zwnj;پُل: پول&zwnj;پُل</strong></p>
+<p><strong>پول&zwnj;پُل چیست؟</strong><br>
+پول&zwnj;پُل بستر خیل&zwnj;مایه&zwnj;گذاری برای پروژه&zwnj;های نوآورانه است. هر چیزی از فیلم، بازی، و موسیقی گرفته تا هنر، طراحی، و فناوری. پول&zwnj;پُل سرشار از پروژه&zwnj;های نوجویانه، نوآورانه، و نام&zwnj;جویانه است که با پشتیبانی مستقیم دیگران به واقعیت می&zwnj;پیوندند.</p>
+<p><strong>پول&zwnj;پُل چگونه کار می&zwnj;کند؟</strong><br>
+پروژه&zwnj;های نوآورانه هر لحظه در پول&zwnj;پُل در حال خیل&zwnj;مایه&zwnj;گذاری اند. هر پروژه&zwnj;ای از سوی شخص مربوطه مستقلاً ایجاد می&zwnj;شود. فیلم&zwnj;سازان، موسیقی&zwnj;دانان، هنرمندان، و طراحانی که شما در پول&zwnj;پُل می&zwnj;بینید، کنترل کاملی روی پروژه&zwnj;های&zwnj;شان دارند. آن&zwnj;ها چندین هفته را صرف ساخت صفحه&zwnj;های پروژه&zwnj;ی&zwnj;شان، ویدئوهای&zwnj;شان، و بارش فکری درباره&zwnj;ی پاداش&zwnj;هایی می&zwnj;کنند که قرار است به پشتیبان&zwnj;های خود بدهند. این سازندگان زمانی که همه چیز آماده شد، پروژه&zwnj;ی&zwnj;شان را راه می&zwnj;اندازند و آن را با دیگران به اشتراک می&zwnj;گذارند.<br>
+هر کدام از سازندگان پروژه&zwnj;ها میزان خیل&zwnj;مایه&zwnj;گذاری پروژه&zwnj;ی&zwnj;شان و زمان نهایی آن را مشخص می&zwnj;کنند. اگر مردم آن پروژه را دوست داشته باشند، می&zwnj;توانند بخشی از پول آن را پیش&zwnj;پرداخت کنند تا چنین پروژه&zwnj;ای اجرا شود. اگر این پروژه بتواند به میزان خیل&zwnj;مایه&zwnj;گذاری خود برسد، در زمان نهایی پروژه از حساب همه&zwnj;ی پشتیبان&zwnj;ها به&zwnj;اندازه&zwnj;ی پیش&zwnj;پرداخت&zwnj;شان پول برداشت می&zwnj;شود. ولی اگر پروژه نتواند به آن میزان برسد، از هیچ&zwnj;کس پولی برداشت نمی&zwnj;شود. خیل&zwnj;مایه&zwnj;گذاری در پول&zwnj;پُل «همه-یا-هیچ» است.</p>
+      </div>
+
+      <div id="create_qolak" class="section scrollspy">
+        <p><p><strong>پشتیبان&zwnj;ها از کجا می&zwnj;آیند؟</strong><br>
+در بیش&zwnj;تر موردها، بیش&zwnj;تر ِ خیل&zwnj;مایه&zwnj;گذاری، نخست از سوی هواداران و دوستان هر پروژه می&zwnj;آید. اگر آن را دوست داشته باشند، به دوستان&zwnj;شان و دیگران درباره&zwnj;اش می&zwnj;گویند. رسانه&zwnj;ها، وبلاگ&zwnj;ها، توییتر، فیسبوک، و خود ِ پول&zwnj;پُل نیز از منابع بزرگ ترافیک و پیش&zwnj;پرداخت&zwnj;ها هستند.</p>
+<p><strong>آیا پشتیبان&zwnj;ها مالکیت یا سهمی در پروژه&zwnj;هایی که خیل&zwnj;مایه&zwnj;گذاری می&zwnj;کنند، دریافت می&zwnj;کنند؟</strong><br>
+نخیر. پروژه&zwnj;آفرین&zwnj;ها ۱۰۰ درصد مالکیت کارشان را نگه می&zwnj;دارند. از پول&zwnj;پُل نمی&zwnj;توان برای ارائه&zwnj;ی بازگشت&zwnj;های مالی یا سهام یا جذب وام بهره برد.<br>
+برخی از پروژه&zwnj;هایی که در پول&zwnj;پُل خیل&zwnj;مایه&zwnj;گذاری می&zwnj;شوند، می&zwnj;توانند به کسب پول ادامه دهند، ولی پشتیبان&zwnj;ها از پروژه&zwnj;ها پشتیبانی می&zwnj;کنند تا به اجرای آن&zwnj;ها کمک کنند نه این&zwnj;که سود مالی به دست آورند.</p>
+<p><strong>کارمزدها شامل چه مواردی می&zwnj;شوند؟</strong><br>
+اگر پروژه&zwnj;ای با موفقیت خیل&zwnj;مایه&zwnj;گذاری شود، پول&zwnj;پُل مقداری به سرمایه&zwnj;ی جمع&zwnj;شده کارمزد اعمال می&zwnj;کند. علاوه بر این، مقداری هم از سوی بانک&zwnj;ها و درگاه&zwnj;های پرداخت به&zwnj;عنوان کارمزد دریافت می&zwnj;شود.</p>
+<p><strong>پول&zwnj;پُل کیست؟</strong><br>
+ما دو نفر هستیم که در ساختمانی کوچک در شهر زنجان کار می&zwnj;کنیم. ما زمان&zwnj;مان را برای بهبود سایت، پاسخ&zwnj;گویی به پرسش&zwnj;های پشتیبان&zwnj;ها و نوآفرین&zwnj;ها، و یافتن پروژه&zwnj;های تازه&zwnj;ی عالی برای ارائه به شما صرف می&zwnj;کنیم. هر روز ما سفری ماجراجویانه است.</p>
+<p>&nbsp;</p>
+</p>
+      </div>
+
+      <div id="back_qolak" class="section scrollspy">
+        <p><strong>پشتیبان&zwnj;ها از کجا می&zwnj;آیند؟</strong><br>
+			در بیش&zwnj;تر موردها، بیش&zwnj;تر ِ خیل&zwnj;مایه&zwnj;گذاری، نخست از سوی هواداران و دوستان هر پروژه می&zwnj;آید. اگر آن را دوست داشته باشند، به دوستان&zwnj;شان و دیگران درباره&zwnj;اش می&zwnj;گویند. رسانه&zwnj;ها، وبلاگ&zwnj;ها، توییتر، فیسبوک، و خود ِ پول&zwnj;پُل نیز از منابع بزرگ ترافیک و پیش&zwnj;پرداخت&zwnj;ها هستند.</p>
+			<p><strong>آیا پشتیبان&zwnj;ها مالکیت یا سهمی در پروژه&zwnj;هایی که خیل&zwnj;مایه&zwnj;گذاری می&zwnj;کنند، دریافت می&zwnj;کنند؟</strong><br>
+			نخیر. پروژه&zwnj;آفرین&zwnj;ها ۱۰۰ درصد مالکیت کارشان را نگه می&zwnj;دارند. از پول&zwnj;پُل نمی&zwnj;توان برای ارائه&zwnj;ی بازگشت&zwnj;های مالی یا سهام یا جذب وام بهره برد.<br>
+			برخی از پروژه&zwnj;هایی که در پول&zwnj;پُل خیل&zwnj;مایه&zwnj;گذاری می&zwnj;شوند، می&zwnj;توانند به کسب پول ادامه دهند، ولی پشتیبان&zwnj;ها از پروژه&zwnj;ها پشتیبانی می&zwnj;کنند تا به اجرای آن&zwnj;ها کمک کنند نه این&zwnj;که سود مالی به دست آورند.</p>
+			<p><strong>کارمزدها شامل چه مواردی می&zwnj;شوند؟</strong><br>
+			اگر پروژه&zwnj;ای با موفقیت خیل&zwnj;مایه&zwnj;گذاری شود، پول&zwnj;پُل مقداری به سرمایه&zwnj;ی جمع&zwnj;شده کارمزد اعمال می&zwnj;کند. علاوه بر این، مقداری هم از سوی بانک&zwnj;ها و درگاه&zwnj;های پرداخت به&zwnj;عنوان کارمزد دریافت می&zwnj;شود.</p>
+			<p><strong>پول&zwnj;پُل کیست؟</strong><br>
+			ما دو نفر هستیم که در ساختمانی کوچک در شهر زنجان کار می&zwnj;کنیم. ما زمان&zwnj;مان را برای بهبود سایت، پاسخ&zwnj;گویی به پرسش&zwnj;های پشتیبان&zwnj;ها و نوآفرین&zwnj;ها، و یافتن پروژه&zwnj;های تازه&zwnj;ی عالی برای ارائه به شما صرف می&zwnj;کنیم. هر روز ما سفری ماجراجویانه است.</p>
+			<p>&nbsp;</p>
+      </div>
+      <div id="issues" class="section scrollspy">
+      Issues section
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ******************************************************************** -->
+  <footer class="page-footer light-blue lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l8 s12 right">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div id="newsletter-pane" class="col l4 s12 news-latter light-blue darken-2 hoverable" data-intro="در خبرنامه ما عضو شوید تا آخرین اخبار راجع به قلک را برای شما ایمیل کنیم!" data-step="5" data-position="top">
+          <h5 class="white-text">در جریان باشید</h5>
+          <p class="grey-text text-lighten-4">ایمیل خود را در کادر زیر وارد کنید تا شما را در جریان اخبار روز قرار دهیم</p>
+          <div class="input-field col s12 white-text">
+            <input id="email" type="email" class="validate">
+            <label class="white-text" for="email">ایمیل</label>
+            <button class="btn btn-medium waves-effect waves-light light-blue darken-4 text-right" type="submit" name="action">عضویت
+              <i class="Large material-icons">send</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright light-blue">
+      <div class="container">
+        <a class="grey-text text-lighten-4 right" href="#!">لینک های دیگر</a>
+        <div class="cp left">تمامی حقوق این سایت، از جمله نشان قلک و نام تجاری قلک، محفوظ و متعلق به قلک است.
+        </div>
+      </div>
+    </div>
+  </footer>  
+
+</body>
+
+</html>
