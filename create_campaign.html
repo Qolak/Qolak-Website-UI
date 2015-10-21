@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <!--CSS Import-->
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/qolak.header.css">
+  <link rel="stylesheet" href="css/qolak.body.css">
+  <link rel="stylesheet" href="css/qolak.footer.css">
+  <link rel="stylesheet" href="css/create_campaign.css">
+  <!--IntroJS CSS Import-->
+  <link rel="stylesheet" href="css/introjs.min.css">
+  <link rel="stylesheet" href="css/introjs-rtl.min.css">
+  <link rel="stylesheet" href="img/intro-themes/introjs-nassim.css">
+
+  <!--JavaScript Import-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+
+  <script src="js/jquery.scrollTo.min.js"></script>
+
+  <!--IntroJS JavaScript Import-->
+  <script src="js/intro.min.js"></script>
+  <!--Scripts for initializing some objects for materializecss-->
+  <script src="js/qolak.js"></script>
+  <script type="text/javascript" src="js/jquery-asPieProgress.js"></script>
+  <!--Purchase CSS Import-->
+  <link rel="stylesheet" href="css/purchase.css">
+  <!--Purchase JavaScript Import-->
+  <script src="js/create_campaign.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+</head>
+
+<body>
+  <div id="introDiv" data-intro="به قلک خوش آمدید!" data-step="1" data-position="bottom"></div>
+  <div class="followMeBar" data-intro="برای شروع، میتوانید یک قلک بسازید تا مردم از شما حمایت مالی کنند! همچنین میتوانید در سایت جستجو کنید یا به مجله های ما که حاوی آخرین اخبار مربوط به قلک است، سری بزنید!" data-step="2" data-position="bottom">
+
+  <!--User Dropdown Initialization-->
+
+    <ul id="user-dropdown" class="dropdown-content">
+      <li><a href="http://qolak.com/user/profile">حساب کاربری</a></li>
+      <li><a href="http://qolak.com/user/settings">تنظیمات</a></li>
+      <li><a href="http://qolak.com/user/qolak">قلک من</a></li>
+      <li class="divider"></li>
+      <li><a href="http://qolak.com/logout">خروج</a></li>
+    </ul>
+
+    <!--Top Navigation Bar-->
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="container">
+
+        <!--Logo Container-->
+        <ul id="logo-container" class="right">
+          <li>
+            <a href="http://qolak.com" class="brand-logo right">قلک</a>
+          </li>
+        </ul>
+
+        <!--User Dropdown Container-->
+        <ul id="dropdown-container" class="right">
+          <li>
+            <a href="" class="dropdown-button" data-activates="user-dropdown" data-beloworigin="true"><i id="arrow" class="material-icons small">arrow_drop_down</i>آقای محمدی</a>
+          </li>
+        </ul>
+
+        <!--Search-Field for Large Screen-->
+        <input id="search-field" type="hidden" value="mehrdad">
+        <ul id="searchbar" class="right hide-on-med-and-down">
+          <li>
+            <form>
+              <div class="input-field">
+                <input id="search" type="search" required class="search-field">
+                <label for="search"><i class="material-icons">search</i></label>
+              </div>
+            </form>
+          </li>
+        </ul>
+
+        <!--Sidebar Menu Button-->
+        <a id="menu-button" href="" data-activates="nav-mobile" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+
+        <!--Top Links Container-->
+        <ul id="top-button-container" class="hide-on-med-and-down left">
+          <li>
+            <a id="introButton" href="#" onclick="startIntro();"><i class="material-icons left">live_help</i>راهنمایی</a>
+          </li>
+          <li>
+            <a href="http://qolak.com/blog"><i class="material-icons left">description</i>مجله</a>
+          </li>
+          <li class="active">
+            <a href="http://qolak.com/create"><i class="material-icons left">queue</i>ساخت قلک</a>
+          </li>
+        </ul>
+
+        <!--Sidebar Items-->
+        <ul id="nav-mobile" class="side-nav">
+          <li id="sidebar-title" class="light-blue darken-1">
+            <h4 style="border-bottom: 2px; padding-bottom:5px;">منو</h4>
+          </li>
+
+          <li id="search-li" class="center hide-on-large-only">
+            <form id="search">
+              <div class="input-field">
+                <input placeholder="جستجو" id="sidebar-search" type="text" class="search-field">
+                <label for="sidebar-search"><i class="material-icons">search</i></label>
+              </div>
+            </form>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#" onclick="startIntro();">راهنمایی</a>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#">ساخت قلک</a>
+          </li>
+          <li class="center hide-on-large-only">
+            <a href="#">مجله</a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+  </div>
+<!-- ******************************************************************** -->
+<div class="container followMeBar white">
+	<div class="row white-text">
+		<ul class="progress-nav col s12 m8 offset-m2 center">
+		    <li id="cart-li" class="">اطلاعات اولیه</li>
+		    <li id="baker-li" class="">جزئیات قلک</li>
+		    <li id="checkout-li" class="">ثبت قلک!</li>
+		</ul>
+	</div>
+	<div class="divider"></div>
+</div>
+<div class="steps">
+	<div id="cart" class="container cart-section tab active">
+		<h4>سبد</h4>
+		<table class="cart-obj bordered striped centered" >
+			<thead>
+			  <tr>
+			      <th data-field="id">شرح کمک</th>
+			      <th data-field="name">مبلغ کمک</th>
+			      <th data-field="price">اصلاح</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+			    <td>
+			   		<img class="responsive-img right" src="img/camp.png"/>
+			   		<span>کمک به محرومین نیازمند</span>
+			    </td>
+			    <td>670,000 ریال</td>
+			    <td><a href="#"><i class="material-icons">remove_circle</i></a></td>
+			  </tr>
+			  <tr>
+			    <td>
+			    	<img class="responsive-img right" src="img/camp.png"/>
+			   		<span>کمک به محرومین نیازمند</span>
+			   	</td>
+			    <td>6,700 ریال</td>
+			    <td><a href="#"><i class="material-icons">remove_circle</i></a></td>
+			  </tr>
+			  <tr>
+			    <td>
+					<img class="responsive-img right" src="img/camp.png"/>
+			   		<span>کمک به محرومین نیازمند</span>
+			    </td>
+			    <td>670 ریال</td>
+			    <td><a href="#"><i class="material-icons">remove_circle</i></a></td>
+			  </tr>
+			</tbody>
+		</table>
+
+	    <div class="row">
+	      <div class="col s12 m5 l4">
+	        <div class="card-panel light-blue lighten-1 center-align">
+	        	<h5 class="white-text">جمع کل مبلغ کمک</h5>
+	        	<div class="divider row"></div>
+		        <h6 class="white-text">67,000,000 ریال</h6>
+	        </div>
+	      </div>
+	    </div>
+
+	    <div class="divider row"></div>
+	    <div class="container center">
+	    	<h5><a class="waves-effect waves-light btn-large move-step" href="#baker">تایید محتویات سبد</a></h5>
+	    </div> 
+	</div>
+	<div id="baker" class="tab">
+		<div class="container row">
+			<h4>مشحصات شما</h4>
+				  <div class="col s12 m8 offset-m2 left">
+					  <div class="input-field col s12">
+              <input value="مهرداد" id="first_name" type="text" class="validate">
+              <label class="active" for="first_name">نام</label>
+            </div>
+            <div class="input-field col s12">
+              <input value="محمدی" id="first_name" type="text" class="validate">
+              <label class="active" for="first_name">نام خانوادگی</label>
+            </div>
+            <div class="input-field col s12">
+            <i class="material-icons prefix">mail</i>
+              <input value="mehdad@qolak.com" id="email" type="text" class="validate">
+              <label class="active" for="email">ایمیل</label>
+            </div>
+          </div>
+				  <img class="responsive-img col s6 offset-s3 m2 circle" src="img/profile.jpg">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">directions</i>
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">آدرس(اختیاری)</label>
+          </div>
+		  </div>
+	    <div class="divider row"></div>
+	    <div class="container row">
+		    <a class="waves-effect waves-light btn-large move-step row col s12 m5 offset-m2" href="#checkout">
+		    	<h4 class="">
+		    		تایید مشخصات و تکمیل خرید
+		    	</h4>
+		    </a>
+    		<a class="waves-effect waves-light btn-large move-step col s12 m2 offset-m1 grey" href="#cart"><i class="material-icons center">forward</i></a>
+	    </div> 	
+	</div>
+	<div id="checkout" class="tab">
+	    <div class="container row">
+    	  <div class="col m4 hide-on-small-only row">
+          <img class="responsive-img right" src="img/heart.png"/>  
+        </div>
+        <div class="col s12 m8"> 
+          <h5 class="blue-text">از کمک شما متشکریم</h5>
+          <h5>مهرداد محمدی عزیز</h5>
+          <h6>
+            ما در گروه قلک کمال تشکر را به خاطر انتخاب این سایت از شما داریم. ما تمام تلاش خود را می کنیم تا کمک ها شما در کمترین زمان و به نحو احسن به ثمر بنشیند. 
+          </h6>
+          <h6>به محض تکمیل این قلک و انجام شدن آن شما را از طریق ایمیل در جریان کارها قرار می دهیم</h6>
+          <h6>با تشکر</h6>
+        </div>
+        <div class="col s12 center">
+  	    	<a class="light-blue lighten-1 waves-effect waves-light btn-large checkout-btn" href="index.html">
+  	    		<h4>
+  	    			بازگشت به صفحه اصلی قلک
+  	    		</h4>
+  	    	</a>
+        </div>
+	    </div>
+	</div>
+</div>
+
+<!-- ******************************************************************** -->
+  <footer class="page-footer light-blue lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l8 s12 right">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div id="newsletter-pane" class="col l4 s12 news-latter light-blue darken-2 hoverable" data-intro="در خبرنامه ما عضو شوید تا آخرین اخبار راجع به قلک را برای شما ایمیل کنیم!" data-step="5" data-position="top">
+          <h5 class="white-text">در جریان باشید</h5>
+          <p class="grey-text text-lighten-4">ایمیل خود را در کادر زیر وارد کنید تا شما را در جریان اخبار روز قرار دهیم</p>
+          <div class="input-field col s12 white-text">
+            <input id="email" type="email" class="validate">
+            <label class="white-text" for="email">ایمیل</label>
+            <button class="btn btn-medium waves-effect waves-light light-blue darken-4 text-right" type="submit" name="action">عضویت
+              <i class="Large material-icons">send</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright light-blue">
+      <div class="container">
+        <a class="grey-text text-lighten-4 right" href="#!">لینک های دیگر</a>
+        <div class="cp left">تمامی حقوق این سایت، از جمله نشان قلک و نام تجاری قلک، محفوظ و متعلق به قلک است.
+        </div>
+      </div>
+    </div>
+  </footer>  
+
+</body>
+
+</html>
